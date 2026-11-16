@@ -1,0 +1,4 @@
+# LF everywhere so the SHA-256 pins of derived files match on every checkout.
+* text=auto eol=lf
+*.png binary
+*.zip binary

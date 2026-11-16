@@ -1,0 +1,88 @@
+{
+ "dataset": "FHWA LTPP InfoPave Standard Data Release 40 (September 2026)",
+ "landing_page": "https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
+ "citation": "Long Term Pavement Performance InfoPave, Standard Data Release, SDR 40, https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
+ "licence": "U.S. Government Works (data.gov record 'Long-Term Pavement Performance (LTPP)', license https://www.usa.gov/government-works); see docs/sources.md",
+ "files": [
+  {
+   "volume_id": 3323,
+   "volume": "Administration",
+   "file_name": "SDR40 - ADMINISTRATION.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3323?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Climate/SDR40 - ADMINISTRATION.zip",
+   "retrieved_utc": "2026-11-15T14:42:11Z",
+   "bytes": 2400213,
+   "sha256": "15c2f1278dcf61e93253e4c0d54d9c5899f9eb3a1c668814a47f15efad3204b4"
+  },
+  {
+   "volume_id": 3305,
+   "volume": "Inventory",
+   "file_name": "SDR40 - INVENTORY.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3305?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Pavement Structure and Construction/SDR40 - INVENTORY.zip",
+   "retrieved_utc": "2026-11-15T14:42:15Z",
+   "bytes": 2485590,
+   "sha256": "bfec1d98a6390b35d520ca72ca2485d3e3d4a1bfbb3123b641f5d224d8c43921"
+  },
+  {
+   "volume_id": 3306,
+   "volume": "Maint Rehab",
+   "file_name": "SDR40 - MAINT_REHAB.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3306?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Pavement Structure and Construction/SDR40 - MAINT_REHAB.zip",
+   "retrieved_utc": "2026-11-15T14:42:19Z",
+   "bytes": 1289577,
+   "sha256": "b35569b14782fddc203bf21b4892273249d1a21b19090b9c70123413481263db"
+  },
+  {
+   "volume_id": 3384,
+   "volume": "Pavement Structure and Construction - Consolidated",
+   "file_name": "SDR40 - CONSOLIDATED.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3384?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Pavement Structure and Construction/SDR40 - CONSOLIDATED.zip",
+   "retrieved_utc": "2026-11-15T14:42:23Z",
+   "bytes": 2056803,
+   "sha256": "04c47b6290aebfb102eac46a2d152e1ca644adef7e46b52f256819e6ba3e1100"
+  },
+  {
+   "volume_id": 3317,
+   "volume": "Specific Pavement Studies",
+   "file_name": "SDR40 - SPECIFIC_PAVEMENT_STUDIES.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3317?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Pavement Structure and Construction/SDR40 - SPECIFIC_PAVEMENT_STUDIES.zip",
+   "retrieved_utc": "2026-11-15T14:42:27Z",
+   "bytes": 1431559,
+   "sha256": "7b12984769bd38bd05031b1e7080050d59fafa1be775f2d876d89a6017c54bf2"
+  },
+  {
+   "volume_id": 3333,
+   "volume": "Traffic",
+   "file_name": "SDR40 - TRAFFIC.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3333?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Traffic/SDR40 - TRAFFIC.zip",
+   "retrieved_utc": "2026-11-15T14:42:31Z",
+   "bytes": 15547082,
+   "sha256": "6d323b313e6acf3dd24e9c2a071df2fbe77f93f8213afa0ccad22a8a1c83af64"
+  },
+  {
+   "volume_id": 3346,
+   "volume": "Climate Summary Data",
+   "file_name": "SDR40 - CLIMATE_SUMMARY_DATA.ZIP",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3346?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Climate/SDR40 - CLIMATE_SUMMARY_DATA.ZIP",
+   "retrieved_utc": "2026-11-15T14:42:38Z",
+   "bytes": 26011810,
+   "sha256": "f65044639666dec57bfe87344a10157698689cb8adba3e98c95e219bfae2aa46"
+  },
+  {
+   "volume_id": 3376,
+   "volume": "Monitoring",
+   "file_name": "SDR40 - MONITORING.zip",
+   "tracker_url": "https://infopave.fhwa.dot.gov/DownloadTracker/SDR/Volume/3376?viewDownload=inline",
+   "file_url": "https://du993ylnpbddg.cloudfront.net/SDR/40/By_Volume/Performance/SDR40 - MONITORING.zip",
+   "retrieved_utc": "2026-11-15T14:42:45Z",
+   "bytes": 23300672,
+   "sha256": "8ea83ee989bad7ca5871cb7df7ab797276404ec2eed56a3c29aba99ce3a70a44"
+  }
+ ]
+}
