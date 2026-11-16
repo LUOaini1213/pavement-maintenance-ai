@@ -8,6 +8,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
+from threadpoolctl import threadpool_limits
 
 NUMERIC_FEATURES = ["y0", "h", "hist_slope", "n_hist", "hist_span", "age0", "seg_overlay_mm", "ac_mm",
                     "unbound_base_mm", "bound_base_mm", "pcc_mm", "kesal", "aadtt", "precip_mm", "temp_c",
@@ -91,9 +92,12 @@ class BoostedIncrement:
         self.columns_ = list(X.columns)
         cat = [c == "event_code" for c in self.columns_]
         self.model_ = HistGradientBoostingRegressor(categorical_features=cat, **self.params)
-        self.model_.fit(X.to_numpy(), (pairs["y1"] - pairs["y0"]).to_numpy(dtype=float))
+        with threadpool_limits(limits=1, user_api="openmp"):       # one thread: same result everywhere, no stalls
+            self.model_.fit(X.to_numpy(), (pairs["y1"] - pairs["y0"]).to_numpy(dtype=float))
         return self
 
     def predict(self, pairs: pd.DataFrame) -> np.ndarray:
         X = feature_frame(pairs, self.extra)[self.columns_].to_numpy()
-        return np.clip(pairs["y0"].to_numpy(dtype=float) + self.model_.predict(X), self.lo, self.hi)
+        with threadpool_limits(limits=1, user_api="openmp"):
+            step = self.model_.predict(X)
+        return np.clip(pairs["y0"].to_numpy(dtype=float) + step, self.lo, self.hi)
