@@ -13,7 +13,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from .data import decimal_year, ols_line, segments, series
+from .data import ols_line, segments, series
 from .events import ORIGINAL
 
 CLASSES = ["seal", "thin_overlay", "medium_overlay", "thick_overlay"]
@@ -75,7 +75,7 @@ def summarise(events: pd.DataFrame, n_boot: int = 1000, seed: int = 0) -> dict:
         res = {
             "n_events": int(len(e)), "n_sites": int(e["site_id"].nunique()),
             "share_designed_experiment": float(e["designed"].mean()),
-            "median_overlay_mm": float(e["overlay_mm"].median()) if e["overlay_mm"].notna().any() else None,
+            "median_overlay_mm": float(e["overlay_mm"].median()) if cls != "seal" and e["overlay_mm"].notna().any() else None,
             "pre_median": float(e["pre"].median()), "post_median": float(e["post"].median()),
             "drop_mean": float(e["drop"].mean()), "drop_lo": lo, "drop_hi": hi,
             "drop_median": float(e["drop"].median()),

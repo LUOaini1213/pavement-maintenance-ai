@@ -137,6 +137,34 @@ def make_pairs(ser: pd.DataFrame, indicator: str, min_h: float = 0.5, max_h: flo
     return pd.DataFrame(rows)
 
 
+def latest_states(ser: pd.DataFrame, indicator: str, horizon: float, min_span: float = 1.0) -> pd.DataFrame:
+    """One forecasting row per section: its last visit as origin and a target `horizon` years later.
+
+    Same columns as make_pairs (y1 is unknown and left NaN), so a fitted model can be applied directly.
+    """
+    spec = INDICATORS[indicator]
+    off, lo, hi = spec["log_offset"], spec["lo"], spec["hi"]
+    static = [c for c in ser.columns if c not in ("date", "cn", "y", "t", "age")]
+    rows = []
+    for _sid, sec in ser.groupby("section_id", sort=False):
+        g = sec[sec["seg"] == sec["seg"].iloc[-1]]            # the surface in place at the last visit
+        t, y, age = g["t"].to_numpy(), g["y"].to_numpy(), g["age"].to_numpy()
+        n_hist, span = len(t), t[-1] - t[0]
+        t1 = t[-1] + horizon
+        if n_hist >= 2 and span >= min_span:
+            a, b = ols_line(t, y)
+            al, bl = ols_line(t, np.log(y + off + 1e-9))
+            p_lin, p_exp, slope = a + b * t1, float(np.exp(min(al + bl * t1, 50.0)) - off), b
+        else:
+            p_lin = p_exp = y[-1]
+            slope = np.nan
+        rows.append({**g.iloc[0][static].to_dict(), "t0": t[-1], "t1": t1, "h": horizon, "y0": y[-1], "y1": np.nan,
+                     "age0": age[-1], "n_hist": n_hist, "hist_span": span, "hist_slope": slope,
+                     "pred_last": y[-1], "pred_linear": float(np.clip(p_lin, lo, hi)),
+                     "pred_exp": float(np.clip(p_exp, lo, hi))})
+    return pd.DataFrame(rows)
+
+
 def add_asof(pairs: pd.DataFrame, other: pd.DataFrame, name: str, tolerance: float = 2.0) -> pd.DataFrame:
     """Attach the latest value of another indicator measured at or before t0 (same section and segment)."""
     left = pairs[["section_id", "seg", "t0"]].copy()
@@ -169,10 +197,16 @@ def add_traffic(pairs: pd.DataFrame, traffic: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def build_dataset(data: dict, indicator: str, **kw) -> pd.DataFrame:
-    """Pairs of one indicator with the other indicators and traffic attached as features."""
+def build_dataset(data: dict, indicator: str, latest_horizon: float | None = None, **kw) -> pd.DataFrame:
+    """Pairs of one indicator with the other indicators and traffic attached as features.
+
+    With `latest_horizon` the rows are the sections' latest states (see latest_states) instead of history pairs.
+    """
     sers = {k: series(data, k) for k in INDICATORS}
-    pairs = make_pairs(sers[indicator], indicator, **kw)
+    if latest_horizon is None:
+        pairs = make_pairs(sers[indicator], indicator, **kw)
+    else:
+        pairs = latest_states(sers[indicator], indicator, latest_horizon)
     for other in INDICATORS:
         if other != indicator:
             pairs = add_asof(pairs, sers[other], f"{other}_0")

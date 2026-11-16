@@ -1,0 +1,140 @@
+{
+ "rqi_coefficients": {
+  "expressway_class1": {
+   "a0": 0.026,
+   "a1": 0.65
+  },
+  "other": {
+   "a0": 0.0185,
+   "a1": 0.58
+  }
+ },
+ "rdi_parameters": {
+  "a0": 1.0,
+  "a1": 3.0,
+  "rda_mm": 10.0,
+  "rdb_mm": 40.0
+ },
+ "grade_limits": {
+  "excellent": 90.0,
+  "good": 80.0,
+  "average": 70.0,
+  "poor": 60.0
+ },
+ "grade_names_zh": {
+  "excellent": "优",
+  "good": "良",
+  "average": "中",
+  "poor": "次",
+  "failed": "差"
+ },
+ "preventive_windows_expressway": {
+  "fog_seal": {
+   "table": "5.2.2",
+   "pci_min": 93.0,
+   "rqi_min": 93.0,
+   "rdi_min": 93.0
+  },
+  "micro_surfacing": {
+   "table": "5.2.5",
+   "pci_min": 90.0,
+   "rqi_min": 90.0,
+   "rdi_min": 90.0
+  },
+  "thin_overlay": {
+   "table": "5.3.2",
+   "pci_min": 85.0,
+   "rqi_min": 85.0,
+   "rdi_min": 80.0
+  },
+  "ultra_thin_overlay": {
+   "table": "5.3.2",
+   "pci_min": 88.0,
+   "rqi_min": 88.0,
+   "rdi_min": 85.0
+  }
+ },
+ "iri_at_rqi_expressway": {
+  "90": 2.2345140978837477,
+  "80": 3.482099045908868,
+  "70": 4.311324431651464,
+  "60": 4.991067127465371,
+  "85": 2.9462425931885368
+ },
+ "iri_at_rqi_other": {
+  "90": 3.090965464761447,
+  "80": 4.489121009962013,
+  "70": 5.418425321570094,
+  "60": 6.180205928947748
+ },
+ "pci_parameters_asphalt": {
+  "a0": 15.0,
+  "a1": 0.412
+ },
+ "distress_ratio_at_pci": {
+  "85": 1.0,
+  "70": 5.378427629705437
+ },
+ "rut_mm_at_rdi_80": 13.333333333333334,
+ "all_visits": {
+  "n_iri": 19949,
+  "rqi_grade_shares": {
+   "excellent": 0.9246077497618929,
+   "good": 0.06591809113238759,
+   "average": 0.00756930171938443,
+   "poor": 0.0015539626046418367,
+   "failed": 0.00035089478169331796
+  },
+  "n_rut": 18143,
+  "rdi_grade_shares": {
+   "excellent": 0.9082290690624484,
+   "good": 0.05010196770104172,
+   "average": 0.023755718458909773,
+   "poor": 0.013173124621065976,
+   "failed": 0.0047401201565342
+  }
+ },
+ "network_latest": {
+  "n_iri": 499,
+  "median_iri": 0.98,
+  "median_rqi": 95.3142741259672,
+  "min_rqi": 77.11398701808417,
+  "rqi_grade_shares": {
+   "excellent": 0.9498997995991983,
+   "good": 0.04408817635270541,
+   "average": 0.006012024048096192,
+   "poor": 0.0,
+   "failed": 0.0
+  },
+  "n_rut": 477,
+  "rdi_grade_shares": {
+   "excellent": 0.9412997903563941,
+   "good": 0.039832285115303984,
+   "average": 0.012578616352201259,
+   "poor": 0.0041928721174004195,
+   "failed": 0.0020964360587002098
+  }
+ },
+ "sources": {
+  "jtg_5210_2018": {
+   "title": "JTG 5210-2018 (EN) Highway Performance Assessment Standard, official English edition",
+   "issuer": "Ministry of Transport of the People's Republic of China",
+   "issued": "2018-12-25",
+   "effective": "2019-05-01",
+   "url": "https://xxgk.mot.gov.cn/jigou/glj/202204/P020220425579066545831.pdf",
+   "sha256": "e36a3baad330112843318aa5ef2028b31e8601676ecd933085e1a5398f4656fd",
+   "retrieved": "2026-11-17",
+   "used": "clause 7.4.5 eq. (7.4.5-1) on PDF page 40; clause 7.4.7 eq. (7.4.7) on PDF pages 42-43; clause 7.4.8 eq. (7.4.8) on PDF page 43; Table 4.0.2 on PDF page 22"
+  },
+  "jtg_t_5142_01_2021": {
+   "title": "JTG/T 5142-01-2021 公路沥青路面预防养护技术规范",
+   "issuer": "Ministry of Transport of the People's Republic of China",
+   "issued": "2021-08-17",
+   "effective": "2021-12-01",
+   "url": "https://xxgk.mot.gov.cn/jigou/glj/202108/P020210827331277450621.pdf",
+   "sha256": "023b669df996a869663d5ae38f24a71582bda7cbc43466f3e8afa6aeccdf68bc",
+   "retrieved": "2026-11-17",
+   "used": "Tables 5.2.2, 5.2.5 and 5.3.2 on PDF pages 21-22; commentary to clause 2.1.1 on PDF page 10"
+  }
+ }
+}

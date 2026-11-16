@@ -266,7 +266,7 @@ def _comparison(gbm_error):
     pairs = pd.DataFrame({"y1": y, "site_id": ["a", "a", "b", "b"], "h": [1.0, 2.0, 2.5, 4.0],
                           "section_id": ["a1", "a1", "b1", "b1"]})
     preds = {"last": y + 0.5, "linear": y + 1.0, "exponential": y + 1.0, "global_rate": y + 0.2, "markov": y + 2.0,
-             "gbm": y + gbm_error}
+             "gbm": y + gbm_error, "gbm_l2": y + 0.4}
     return A.summarise(pairs, preds, np.ones(4, dtype=bool), n_boot=100)
 
 
@@ -277,7 +277,10 @@ def test_summarise_names_best_baseline_and_sign_of_the_gain():
     assert res["all"]["gbm_mae_change_pct"] == pytest.approx(-50.0)
     assert res["all"]["gbm_beats_best_baseline"] is True
     assert res["h_0.5_2"]["n_pairs"] == 2 and res["h_2_5"]["n_pairs"] == 2      # h = 2.0 belongs to the short bin
-    assert set(res["all"]["mae_diff"]) == {"last-gbm", "linear-gbm", "exponential-gbm", "global_rate-gbm", "markov-gbm"}
+    assert set(res["all"]["mae_diff"]) == {"last-gbm", "linear-gbm", "exponential-gbm", "global_rate-gbm", "markov-gbm",
+                                           "gbm-gbm_l2"}
+    assert res["all"]["mae_diff"]["gbm-gbm_l2"]["diff"] == pytest.approx(-0.3)
+    assert res["all"]["methods"]["gbm_l2"]["mae"] == pytest.approx(0.4)
 
 
 def test_summarise_says_so_when_boosting_is_worse():
@@ -297,7 +300,8 @@ def test_out_of_fold_predictions_cover_only_test_pairs(toy):
     assert preds["linear"] == pytest.approx(extra["pred_linear"].to_numpy())
     preds, tested, sizes = A.out_of_fold(extra, "iri", cutoff=1994.0, gbm_params={"max_iter": 5, "min_samples_leaf": 2})
     assert (extra.loc[tested, "t0"] >= 1994.0).all() and tested.sum() == (extra["t0"] >= 1994.0).sum()
-    assert np.isnan(preds["gbm"][~tested]).all()
+    assert np.isnan(preds["gbm"][~tested]).all() and np.isnan(preds["gbm_l2"][~tested]).all()
+    assert not np.isnan(preds["gbm_l2"][tested]).any()
 
 
 # ---- treatment effects ----------------------------------------------------------------------------------------------

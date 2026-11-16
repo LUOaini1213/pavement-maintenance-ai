@@ -1,0 +1,141 @@
+{
+ "inputs": [
+  {
+   "input": "IRI, rut depth, cracking, layer thickness, truck traffic, ESAL, climate, work history",
+   "kind": "real",
+   "basis": "LTPP SDR 40 (FHWA InfoPave), release level E records"
+  },
+  {
+   "input": "RQI and RDI formulas, coefficients, grade limits",
+   "kind": "real",
+   "basis": "JTG 5210-2018, clauses 7.4.7, 7.4.8, Table 4.0.2"
+  },
+  {
+   "input": "PCI formula and coefficients for asphalt pavement",
+   "kind": "real",
+   "basis": "JTG 5210-2018, clause 7.4.5"
+  },
+  {
+   "input": "Thin overlay allowed only while PCI and RQI are 85 or more and RDI is 80 or more",
+   "kind": "real",
+   "basis": "JTG/T 5142-01-2021, Table 5.3.2 (expressway)"
+  },
+  {
+   "input": "LTPP cracking percent (HPMS definition) used as the distress ratio DR in the PCI formula",
+   "kind": "assumption",
+   "basis": "none; DR in JTG 5210-2018 weights each distress type and severity, which is not reproduced"
+  },
+  {
+   "input": "Resurfacing allowed only while PCI is 70 or more",
+   "kind": "assumption",
+   "basis": "none; 70 is the lower limit of grade 'average'"
+  },
+  {
+   "input": "Thin overlay = 40 mm or less",
+   "kind": "real",
+   "basis": "JTG/T 5142-01-2021, commentary to clause 2.1.1"
+  },
+  {
+   "input": "Unit costs of resurfacing and reconstruction",
+   "kind": "real",
+   "basis": "FHWA C&P report, 24th ed., Exhibit A-5 (2016 USD)"
+  },
+  {
+   "input": "Unit cost of a thin overlay",
+   "kind": "assumption",
+   "basis": "midpoint of the range in FHWA-HIF-10-020 (2009 USD), not inflated"
+  },
+  {
+   "input": "IRI after a treatment as a line in the IRI before; IRI growth rate after a treatment",
+   "kind": "calibrated",
+   "basis": "before/after pairs of LTPP events, results/treatment_effects.json"
+  },
+  {
+   "input": "Do-nothing IRI growth rate",
+   "kind": "calibrated",
+   "basis": "method that wins the forward validation, results/deterioration.json"
+  },
+  {
+   "input": "75 mm limit between medium and thick overlay",
+   "kind": "assumption",
+   "basis": "none"
+  },
+  {
+   "input": "One lane-km per test section; network = sections profiled since 2010",
+   "kind": "assumption",
+   "basis": "none"
+  },
+  {
+   "input": "At most one treatment per section in the five-year plan",
+   "kind": "assumption",
+   "basis": "keeps the model linear"
+  },
+  {
+   "input": "Budget levels; worst-first triggers 1.5 and 2.5 m/km; 8-year cycle; 0.5 m/km floor",
+   "kind": "assumption",
+   "basis": "none"
+  },
+  {
+   "input": "Pricing a thick overlay as a reconstruction",
+   "kind": "assumption",
+   "basis": "none; on the high side"
+  },
+  {
+   "input": "Markov state limits; five-year maximum horizon; year-2000 time cut",
+   "kind": "assumption",
+   "basis": "none"
+  }
+ ],
+ "costs": {
+  "preventive": {
+   "label": "thin asphalt overlay (40 mm or less)",
+   "low_per_lane_mile": 29.409,
+   "high_per_lane_mile": 249.699,
+   "dollar_year": 2009,
+   "source": "FHWA-HIF-10-020, Performance Evaluation of Various Rehabilitation and Preservation Treatments (January 2010), chapter 3, summary table 'HMA - thin overlay': 'Based on 13 projects, cost/lane mile ranges from $29,409 to $249,699' (2009 dollars)",
+   "url": "https://www.fhwa.dot.gov/pavement/preservation/pubs/perfeval/chap03.cfm",
+   "point": "midpoint of the published range (assumption)"
+  },
+  "minor_rehab": {
+   "label": "resurfacing (overlay above 40 and below 75 mm)",
+   "per_lane_mile": 332.0,
+   "dollar_year": 2016,
+   "source": "FHWA, Status of the Nation's Highways, Bridges, and Transit: Conditions & Performance, 24th edition, Appendix A, Exhibit A-5, rural Interstate, flat terrain, 'Resurface Existing Lane'",
+   "url": "https://www.fhwa.dot.gov/policy/24cpr/pdf/AppendixA.pdf",
+   "point": "value as published"
+  },
+  "major_rehab": {
+   "label": "thick overlay (75 mm or more) or reconstruction",
+   "per_lane_mile": 1160.0,
+   "dollar_year": 2016,
+   "source": "same exhibit, 'Typical Reconstruction - Reconstruct Existing Lane'",
+   "url": "https://www.fhwa.dot.gov/policy/24cpr/pdf/AppendixA.pdf",
+   "point": "value as published; pricing a thick overlay as a reconstruction is an assumption (on the high side)"
+  }
+ },
+ "optimisation": {
+  "horizon_years": 5,
+  "network_min_last_visit_year": 2010,
+  "section_length_lane_km": 1.0,
+  "budget_shares": [
+   0.005,
+   0.01,
+   0.02,
+   0.03,
+   0.05,
+   0.08,
+   0.12
+  ],
+  "base_budget_share": 0.03,
+  "preventive_min_rqi": 85.0,
+  "preventive_min_pci": 85.0,
+  "preventive_min_rdi": 80.0,
+  "minor_rehab_min_pci": 70.0,
+  "treatment_floor_iri": 0.5,
+  "worst_first": {
+   "trigger_iri": 1.5,
+   "major_iri": 2.5
+  },
+  "fixed_cycle_years": 8.0
+ }
+}

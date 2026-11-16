@@ -40,6 +40,19 @@ def test_rdi_piecewise(rut, expected):
     assert china.rdi(rut) == pytest.approx(expected, abs=1e-12)
 
 
+# ---- JTG 5210-2018 eq. (7.4.5-1): PCI = 100 - 15 DR^0.412 (asphalt) ---------------------------------------------
+def test_pci_hand_values():
+    assert china.pci(0.0) == pytest.approx(100.0)
+    assert china.pci(1.0) == pytest.approx(85.0)
+    # DR 5 %: 5^0.412 = exp(0.412 x 1.609438) = exp(0.663088) = 1.940778 -> 100 - 29.1117
+    assert china.pci(5.0) == pytest.approx(70.8883, abs=1e-3)
+    assert china.pci(-1.0) == pytest.approx(100.0)                     # a negative ratio is treated as none
+    assert china.dr_for_pci(85.0) == pytest.approx(1.0)
+    # PCI 70: (30 / 15)^(1 / 0.412) = 2^2.427184 = 5.3784
+    assert china.dr_for_pci(70.0) == pytest.approx(5.3784, abs=1e-3)
+    assert china.pci(china.dr_for_pci(92.0)) == pytest.approx(92.0)
+
+
 # ---- JTG 5210-2018 Table 4.0.2 --------------------------------------------------------------------------------
 @pytest.mark.parametrize("value, name", [(100.0, "excellent"), (90.0, "excellent"), (89.99, "good"), (80.0, "good"),
                                          (79.99, "average"), (70.0, "average"), (69.99, "poor"), (60.0, "poor"),
@@ -58,7 +71,7 @@ def test_grade_shares_sum_to_one_and_keep_order():
 
 def test_preventive_windows_are_the_published_ones():
     w = china.PREVENTIVE_WINDOWS_EXPRESSWAY
-    assert w["thin_overlay"]["rqi_min"] == 85.0 and w["thin_overlay"]["rdi_min"] == 80.0
+    assert w["thin_overlay"] == {"table": "5.3.2", "pci_min": 85.0, "rqi_min": 85.0, "rdi_min": 80.0}
     assert w["micro_surfacing"]["rqi_min"] == 90.0 and w["fog_seal"]["rqi_min"] == 93.0
     assert w["ultra_thin_overlay"]["rqi_min"] == 88.0
 

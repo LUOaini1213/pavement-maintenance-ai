@@ -148,6 +148,7 @@ def test_evaluate_plan_hand_values():
     assert ev["mean_iri_final"] == pytest.approx(1.175)
     assert ev["spend_by_year"] == [4.0, 0.0] and ev["total_spend"] == 4.0
     assert ev["treatments"] == {"light": 1} and ev["treated_sections"] == 1
+    assert ev["treatments_by_year"] == [{"light": 1}, {"light": 0}]
     assert ev["share_rqi_ge_90_final"] == pytest.approx(1.0)
     assert ev["share_iri_le_1p5_final"] == pytest.approx(1.0)
     assert ev["max_iri_final"] == pytest.approx(1.2)
@@ -156,3 +157,16 @@ def test_evaluate_plan_hand_values():
     assert nothing["share_rqi_ge_90_final"] == pytest.approx(0.75)
     assert nothing["share_iri_le_1p5_final"] == pytest.approx(0.75)
     assert nothing["mean_iri_by_year"] == pytest.approx([(3.1 + 3.3) / 4, (3.2 + 3.6) / 4])
+
+
+def test_section_eligibility_limits_the_options_and_the_rules():
+    only_heavy = Section("a", 3.0, 0.0, eligible=frozenset({"heavy"}))
+    anything = Section("b", 3.0, 0.0)
+    assert {o["k"] for o in options([only_heavy], [A, B], 1)} == {1}
+    assert {o["k"] for o in options([anything], [A, B], 1)} == {0, 1}
+    assert only_heavy.may_receive(B) and not only_heavy.may_receive(A) and anything.may_receive(A)
+    # the rule asks for the light treatment; the section that may not have it is passed over
+    plan = greedy_rule([only_heavy, anything], [A, B], [20.0], "worst", lambda s, cur, age: 0)["plan"]
+    assert plan == {1: (1, 0)}
+    res = solve_mip([only_heavy, anything], [A, B], [14.0])
+    assert res["plan"] == {0: (1, 1), 1: (1, 0)} and res["objective"] == pytest.approx(2.5 + 2.0)

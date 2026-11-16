@@ -12,13 +12,20 @@ def fold_of(site_id: str, k: int = 5) -> int:
     return zlib.crc32(str(site_id).encode("utf-8")) % k
 
 
-def split(pairs: pd.DataFrame, fold: int, k: int = 5, cutoff: float | None = None) -> tuple[np.ndarray, np.ndarray]:
+def split(pairs: pd.DataFrame, fold: int, k: int = 5, cutoff: float | None = None,
+          leaky: bool = False) -> tuple[np.ndarray, np.ndarray]:
     """Boolean masks (train, test).
 
     Sites of the test fold never appear in training. With `cutoff` (a decimal year) training pairs must END before
     it and test pairs must START at or after it, so the model is also tested forward in time.
+
+    leaky=True is the wrong way, kept only to show what it does to the scores: pairs are dealt to folds at random,
+    so the same section (and overlapping pairs of it) sits on both sides.
     """
-    f = pairs["site_id"].map(lambda s: fold_of(s, k)).to_numpy()
+    if leaky:
+        f = np.random.default_rng(0).permutation(len(pairs)) % k
+    else:
+        f = pairs["site_id"].map(lambda s: fold_of(s, k)).to_numpy()
     train = f != fold
     test = f == fold
     if cutoff is not None:

@@ -1,0 +1,46 @@
+{
+ "dataset": "FHWA LTPP InfoPave Standard Data Release 40 (September 2026)",
+ "citation": "Long Term Pavement Performance InfoPave, Standard Data Release, SDR 40, https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
+ "landing_page": "https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
+ "raw_files": 8,
+ "raw_bytes": 74523306,
+ "retrieved": "2026-11-15",
+ "sections": 1823,
+ "sites": 422,
+ "sections_with_climate": 1337,
+ "events": {
+  "routine": 1973,
+  "original": 1823,
+  "thick_overlay": 556,
+  "seal": 531,
+  "medium_overlay": 373,
+  "thin_overlay": 291,
+  "overlay_unknown": 7
+ },
+ "indicators": {
+  "iri": {
+   "unit": "m/km",
+   "visits": 19949,
+   "sections": 1817,
+   "first_year": 1989,
+   "last_year": 2025,
+   "median": 1.133
+  },
+  "rut": {
+   "unit": "mm",
+   "visits": 18143,
+   "sections": 1814,
+   "first_year": 1989,
+   "last_year": 2025,
+   "median": 5.0
+  },
+  "crack": {
+   "unit": "%",
+   "visits": 13127,
+   "sections": 1806,
+   "first_year": 1988,
+   "last_year": 2025,
+   "median": 1.0
+  }
+ }
+}

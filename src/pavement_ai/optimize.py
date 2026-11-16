@@ -45,6 +45,10 @@ class Section:
     rate: float                 # do-nothing annual IRI growth, m/km per year
     length: float = 1.0         # lane-km
     age: float = 0.0            # years since the surface was last renewed, at the start of the plan
+    eligible: frozenset | None = None   # names of the treatments this section may receive (None = any)
+
+    def may_receive(self, tr: "Treatment") -> bool:
+        return self.eligible is None or tr.name in self.eligible
 
 
 def trajectory(sec: Section, horizon: int, year: int | None = None, tr: Treatment | None = None) -> np.ndarray:
@@ -75,7 +79,7 @@ def options(sections: list[Section], treatments: list[Treatment], horizon: int) 
         for t in range(1, horizon + 1):
             pre = pre_value(sec, t)
             for k, tr in enumerate(treatments):
-                if not tr.allowed(pre):
+                if not (sec.may_receive(tr) and tr.allowed(pre)):
                     continue
                 gain = float((base - trajectory(sec, horizon, t, tr)).sum() * sec.length)
                 out.append({"i": i, "t": t, "k": k, "cost": tr.cost * sec.length, "benefit": gain})
@@ -147,7 +151,7 @@ def greedy_rule(sections: list[Section], treatments: list[Treatment], budgets: l
             cand.append((-(cur if order == "worst" else age), i, cur, age))
         for _key, i, cur, age in sorted(cand):
             k = choose(sections[i], cur, age)
-            if k is None or not treatments[k].allowed(cur):
+            if k is None or not (sections[i].may_receive(treatments[k]) and treatments[k].allowed(cur)):
                 continue
             cost = treatments[k].cost * sections[i].length
             if cost <= left + 1e-9:
@@ -164,9 +168,11 @@ def evaluate_plan(sections: list[Section], treatments: list[Treatment], plan: di
     mean_by_year = (traj * length[:, None]).sum(axis=0) / length.sum()
     spend = np.zeros(horizon)
     count = {tr.name: 0 for tr in treatments}
+    by_year = [{tr.name: 0 for tr in treatments} for _ in range(horizon)]
     for i, (t, k) in plan.items():
         spend[t - 1] += treatments[k].cost * sections[i].length
         count[treatments[k].name] += 1
+        by_year[t - 1][treatments[k].name] += 1
     end_rqi = np.array([rqi(v) for v in traj[:, -1]])
     return {
         "mean_iri_by_year": [float(v) for v in mean_by_year],
@@ -176,6 +182,7 @@ def evaluate_plan(sections: list[Section], treatments: list[Treatment], plan: di
         "total_spend": float(spend.sum()),
         "treated_sections": int(len(plan)),
         "treatments": count,
+        "treatments_by_year": by_year,
         "share_rqi_ge_90_final": float((length * (end_rqi >= 90.0)).sum() / length.sum()),
         "share_iri_le_1p5_final": float((length * (traj[:, -1] <= 1.5)).sum() / length.sum()),
         "max_iri_final": float(traj[:, -1].max()),
