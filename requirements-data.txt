@@ -1,0 +1,2 @@
+# Only needed to rebuild data/derived/ from the LTPP Access databases (scripts/dump_tables.py).
+access-parser==0.0.6
