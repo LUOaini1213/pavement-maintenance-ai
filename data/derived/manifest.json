@@ -1,0 +1,35 @@
+{
+ "source": "LTPP SDR 40, see data/raw_manifest.json",
+ "files": {
+  "crack.csv": {
+   "sha256": "2df99f95ab81303baa5842b50c7ce7d928342c2a8497baff01b9bc11556e6358",
+   "bytes": 477416,
+   "rows": 13127
+  },
+  "iri.csv": {
+   "sha256": "952bbd7db927fe95a3b57c8cfa7816d1a5bb34b8c5723e17782253c86102a9d1",
+   "bytes": 576385,
+   "rows": 19949
+  },
+  "periods.csv": {
+   "sha256": "d23c8ee00236177c86ec98e194d6ec7c0f85f758e54c98963c377dbf024853e0",
+   "bytes": 286548,
+   "rows": 5554
+  },
+  "rut.csv": {
+   "sha256": "551552c97a3edad216c68a889296b0a6d21b476057657e72340391e272dfef0d",
+   "bytes": 419642,
+   "rows": 18143
+  },
+  "sections.csv": {
+   "sha256": "73b7928504a2c730cc0ffaa61902784acd91348150d968b8ff59cfdb559ae1d3",
+   "bytes": 90671,
+   "rows": 1823
+  },
+  "traffic.csv": {
+   "sha256": "80b6950a39267e4a13fdbfd4049125a880127cb65bb62d5dd5786e76c3d94b5e",
+   "bytes": 1097389,
+   "rows": 52908
+  }
+ }
+}
