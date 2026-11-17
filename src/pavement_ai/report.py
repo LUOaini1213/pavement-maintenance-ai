@@ -18,7 +18,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 RESULTS = REPO / "results"
 PLACEHOLDER = re.compile(r"\{\{\s*([a-z_]+):([^|}]+?)\s*(?:\|\s*([^}]+?)\s*)?\}\}")
-NUMBER = re.compile(r"\d+(?:[.,]\d+)*")
+NUMBER = re.compile(r"(?<![A-Za-z_\d])\d+(?:[.,]\d+)*")     # digits glued to a letter (a0, RDa) are names
 THOUSANDS = re.compile(r"^\d{1,3}(?:,\d{3})+(?:\.\d+)?$")
 
 
@@ -67,7 +67,7 @@ def render(template: str, results: dict, tables: dict | None = None) -> str:
 
 def template_digits(template: str) -> list[str]:
     """Digits a template carries outside its placeholders (there must be none)."""
-    return re.findall(r"\d+", PLACEHOLDER.sub("", template))
+    return NUMBER.findall(PLACEHOLDER.sub("", template))
 
 
 def leaves(node):

@@ -29,6 +29,14 @@ def read(name: str) -> dict:
     return json.loads((RESULTS / f"{name}.json").read_text(encoding="utf-8"))
 
 
+def write_optimisation(opt: dict) -> None:
+    """The section list and the base plan go to results/detail/ (kept out of the pool the README numbers are
+    checked against, which is results/*.json)."""
+    detail = {"network_sections": opt.pop("network_sections"), "base_mip_plan": opt.pop("base_mip_plan")}
+    pipeline.write_json("optimisation", opt)
+    pipeline.write_json("base_plan", detail, RESULTS / "detail")
+
+
 def figures() -> None:
     import matplotlib
     matplotlib.use("Agg")
@@ -74,7 +82,7 @@ def main(parts: list[str]) -> None:
     if "data" in todo:
         pipeline.write_json("data", pipeline.clean(pipeline.data_summary(data)))
         pipeline.write_json("inputs", {"inputs": [{"input": a, "kind": b, "basis": c} for a, b, c in config.INPUT_TABLE],
-                                       "costs": config.COSTS, "optimisation": config.OPTIMISATION,
+                                       "python": "3.11", "costs": config.COSTS, "optimisation": config.OPTIMISATION,
                                        "event_classes": {"thin_overlay_max_mm": events.THIN_OVERLAY_MAX_MM,
                                                          "thick_overlay_min_mm": events.THICK_OVERLAY_MIN_MM}})
         log("data summary written")
@@ -90,8 +98,8 @@ def main(parts: list[str]) -> None:
     if "opt" in todo:
         v = config.VALIDATION
         pairs = D.build_dataset(data, "iri", min_h=v["min_horizon"], max_h=v["max_horizon"])
-        pipeline.write_json("optimisation", pipeline.optimisation(data, pairs, read("deterioration"),
-                                                                read("treatment_effects")))
+        log("IRI pairs built")
+        write_optimisation(pipeline.optimisation(data, pairs, read("deterioration"), read("treatment_effects")))
         log("optimisation written")
     if "fig" in todo:
         figures()

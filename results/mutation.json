@@ -1,0 +1,18 @@
+{
+ "tests": 0,
+ "control": {},
+ "first": {
+  "pending": true,
+  "tests": 0,
+  "total": 0,
+  "killed": 0,
+  "survived": 0
+ },
+ "final": {
+  "pending": true,
+  "tests": 0,
+  "total": 0,
+  "killed": 0,
+  "survived": 0
+ }
+}

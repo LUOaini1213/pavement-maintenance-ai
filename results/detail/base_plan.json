@@ -1,0 +1,5374 @@
+{
+ "network_sections": [
+  {
+   "sid": "01-0502",
+   "iri": 1.289,
+   "rate": 0.023416724738675964,
+   "age": 25.23887748117727,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0503",
+   "iri": 1.336,
+   "rate": 0.023416724738675964,
+   "age": 25.24709103353871,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0504",
+   "iri": 1.0,
+   "rate": 0.023416724738675964,
+   "age": 25.26351813826159,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0505",
+   "iri": 1.256,
+   "rate": 0.023416724738675964,
+   "age": 25.23887748117727,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0506",
+   "iri": 0.67,
+   "rate": 0.023416724738675964,
+   "age": 3.668720054756932,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "01-0507",
+   "iri": 1.129,
+   "rate": 0.023416724738675964,
+   "age": 25.26625598904866,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0508",
+   "iri": 1.301,
+   "rate": 0.023416724738675964,
+   "age": 25.26625598904866,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0509",
+   "iri": 1.106,
+   "rate": 0.023416724738675964,
+   "age": 25.26625598904866,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "01-0563",
+   "iri": 0.951,
+   "rate": 0.023416724738675964,
+   "age": 3.668720054756932,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "01-4155",
+   "iri": 0.891,
+   "rate": 0.023416724738675964,
+   "age": 17.95893223819303,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "02-9035",
+   "iri": 2.078,
+   "rate": 0.023416724738675964,
+   "age": 26.98631074606419,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-0260",
+   "iri": 1.882,
+   "rate": 0.023416724738675964,
+   "age": 23.969199178644658,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-0261",
+   "iri": 1.876,
+   "rate": 0.023416724738675964,
+   "age": 23.969199178644658,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1003",
+   "iri": 0.831,
+   "rate": 0.023416724738675964,
+   "age": 27.307323750855403,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-1006",
+   "iri": 1.123,
+   "rate": 0.023416724738675964,
+   "age": 27.307323750855403,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "04-1015",
+   "iri": 1.157,
+   "rate": 0.023416724738675964,
+   "age": 17.856947296372255,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1016",
+   "iri": 1.507,
+   "rate": 0.023416724738675964,
+   "age": 22.77823408624249,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1017",
+   "iri": 1.071,
+   "rate": 0.023416724738675964,
+   "age": 19.596851471594846,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "04-1018",
+   "iri": 1.107,
+   "rate": 0.023416724738675964,
+   "age": 19.04106776180697,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1021",
+   "iri": 1.363,
+   "rate": 0.023416724738675964,
+   "age": 7.9171800136894035,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1024",
+   "iri": 1.11,
+   "rate": 0.023416724738675964,
+   "age": 21.865845311430576,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-1025",
+   "iri": 3.18,
+   "rate": 0.023416724738675964,
+   "age": 17.04106776180697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "04-1062",
+   "iri": 0.411,
+   "rate": 0.023416724738675964,
+   "age": 1.1861738535251334,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-1065",
+   "iri": 1.849,
+   "rate": 0.023416724738675964,
+   "age": 19.490759753593238,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-AA01",
+   "iri": 0.916,
+   "rate": 0.023416724738675964,
+   "age": 9.550308008213506,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-AA02",
+   "iri": 0.833,
+   "rate": 0.023416724738675964,
+   "age": 8.509240246406534,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-AA03",
+   "iri": 1.46,
+   "rate": 0.023416724738675964,
+   "age": 9.550308008213506,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "04-AA59",
+   "iri": 0.679,
+   "rate": 0.023416724738675964,
+   "age": 9.550308008213506,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-AA60",
+   "iri": 1.659,
+   "rate": 0.023416724738675964,
+   "age": 9.550308008213506,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-AA61",
+   "iri": 1.705,
+   "rate": 0.023416724738675964,
+   "age": 9.550308008213506,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA01",
+   "iri": 0.973,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA02",
+   "iri": 0.843,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA03",
+   "iri": 0.83,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA59",
+   "iri": 0.939,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA60",
+   "iri": 1.09,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "04-BA61",
+   "iri": 1.065,
+   "rate": 0.023416724738675964,
+   "age": 5.506502395619464,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "05-A603",
+   "iri": 1.077,
+   "rate": 0.023416724738675964,
+   "age": 14.60848733744001,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "05-A604",
+   "iri": 1.091,
+   "rate": 0.023416724738675964,
+   "age": 14.60848733744001,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "05-A606",
+   "iri": 1.217,
+   "rate": 0.023416724738675964,
+   "age": 14.60848733744001,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "05-A607",
+   "iri": 1.253,
+   "rate": 0.023416724738675964,
+   "age": 14.572895277207408,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "05-A608",
+   "iri": 1.046,
+   "rate": 0.023416724738675964,
+   "age": 14.572895277207408,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-2002",
+   "iri": 0.878,
+   "rate": 0.023416724738675964,
+   "age": 15.37303216974692,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-2038",
+   "iri": 0.857,
+   "rate": 0.023416724738675964,
+   "age": 6.257357973990565,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-2041",
+   "iri": 1.065,
+   "rate": 0.023416724738675964,
+   "age": 20.67077344284735,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-7452",
+   "iri": 1.359,
+   "rate": 0.023416724738675964,
+   "age": 14.9616700889801,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-7454",
+   "iri": 2.23,
+   "rate": 0.023416724738675964,
+   "age": 14.745379876796733,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-7455",
+   "iri": 0.646,
+   "rate": 0.023416724738675964,
+   "age": 6.436002737850913,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-7456",
+   "iri": 0.917,
+   "rate": 0.023416724738675964,
+   "age": 14.394934976043942,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "06-7491",
+   "iri": 0.509,
+   "rate": 0.023416724738675964,
+   "age": 3.5208761122519263,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-8149",
+   "iri": 0.631,
+   "rate": 0.023416724738675964,
+   "age": 3.5208761122519263,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-8150",
+   "iri": 1.083,
+   "rate": 0.023416724738675964,
+   "age": 3.594798083504429,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-8156",
+   "iri": 0.983,
+   "rate": 0.023416724738675964,
+   "age": 1.734428473647995,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-8534",
+   "iri": 1.303,
+   "rate": 0.023416724738675964,
+   "age": 15.120465434633843,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "06-8535",
+   "iri": 0.832,
+   "rate": 0.023416724738675964,
+   "age": 0.7234770704997118,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-A805",
+   "iri": 1.278,
+   "rate": 0.023416724738675964,
+   "age": 26.05749486652985,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "06-A806",
+   "iri": 1.132,
+   "rate": 0.023416724738675964,
+   "age": 26.05749486652985,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "08-1029",
+   "iri": 1.583,
+   "rate": 0.023416724738675964,
+   "age": 7.227241615332105,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "08-1053",
+   "iri": 0.942,
+   "rate": 0.023416724738675964,
+   "age": 17.331279945243068,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "08-7035",
+   "iri": 2.04,
+   "rate": 0.023416724738675964,
+   "age": 19.084873374401013,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "08-7780",
+   "iri": 2.012,
+   "rate": 0.023416724738675964,
+   "age": 13.041067761806971,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "08-7781",
+   "iri": 0.938,
+   "rate": 0.023416724738675964,
+   "age": 0.6550308008213506,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "08-7783",
+   "iri": 0.842,
+   "rate": 0.023416724738675964,
+   "age": 15.399726214921202,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "09-1803",
+   "iri": 2.005,
+   "rate": 0.023416724738675964,
+   "age": 18.188911704312204,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "09-4020",
+   "iri": 2.425,
+   "rate": 0.023416724738675964,
+   "age": 12.964407939767398,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "09-5001",
+   "iri": 0.883,
+   "rate": 0.023416724738675964,
+   "age": 3.611225188227081,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "10-1450",
+   "iri": 1.054,
+   "rate": 0.023416724738675964,
+   "age": 3.4380561259411024,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "10-5005",
+   "iri": 0.744,
+   "rate": 0.023416724738675964,
+   "age": 4.906913073237547,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0101",
+   "iri": 1.066,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0102",
+   "iri": 0.908,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0103",
+   "iri": 1.165,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0104",
+   "iri": 0.911,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0105",
+   "iri": 1.119,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0106",
+   "iri": 0.854,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0107",
+   "iri": 1.042,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0108",
+   "iri": 1.051,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0109",
+   "iri": 0.778,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "12-0110",
+   "iri": 1.06,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0111",
+   "iri": 0.933,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0112",
+   "iri": 0.863,
+   "rate": 0.023416724738675964,
+   "age": 19.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-0502",
+   "iri": 1.05,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0503",
+   "iri": 0.705,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0504",
+   "iri": 0.629,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0505",
+   "iri": 0.692,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0506",
+   "iri": 0.69,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0507",
+   "iri": 0.953,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0508",
+   "iri": 0.719,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0509",
+   "iri": 0.731,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0561",
+   "iri": 0.663,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0562",
+   "iri": 0.67,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0563",
+   "iri": 0.735,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0564",
+   "iri": 0.742,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0565",
+   "iri": 0.685,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-0566",
+   "iri": 0.591,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-1030",
+   "iri": 0.713,
+   "rate": 0.023416724738675964,
+   "age": 6.2245037645448065,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-1370",
+   "iri": 2.043,
+   "rate": 0.023416724738675964,
+   "age": 14.128678986995283,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-4096",
+   "iri": 1.286,
+   "rate": 0.023416724738675964,
+   "age": 18.38603696098562,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "12-4100",
+   "iri": 0.751,
+   "rate": 0.023416724738675964,
+   "age": 7.153319644079602,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "12-AA01",
+   "iri": 1.159,
+   "rate": 0.023416724738675964,
+   "age": 8.049281314168411,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "12-AA02",
+   "iri": 1.396,
+   "rate": 0.023416724738675964,
+   "age": 8.049281314168411,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-AA03",
+   "iri": 2.089,
+   "rate": 0.023416724738675964,
+   "age": 8.049281314168411,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "12-AA61",
+   "iri": 1.463,
+   "rate": 0.023416724738675964,
+   "age": 8.046543463381113,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "13-7028",
+   "iri": 1.056,
+   "rate": 0.023416724738675964,
+   "age": 21.822039698836306,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "16-1007",
+   "iri": 0.839,
+   "rate": 0.023416724738675964,
+   "age": 5.969883641341539,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "16-1020",
+   "iri": 0.69,
+   "rate": 0.023416724738675964,
+   "age": 12.312114989733118,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "16-9034",
+   "iri": 1.041,
+   "rate": 0.023416724738675964,
+   "age": 13.281998631074657,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "17-5151",
+   "iri": 1.256,
+   "rate": 0.023416724738675964,
+   "age": 12.953456536618887,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "17-5453",
+   "iri": 1.122,
+   "rate": 0.023416724738675964,
+   "age": 13.90691307323732,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "17-5843",
+   "iri": 1.164,
+   "rate": 0.023416724738675964,
+   "age": 11.882272416153455,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "17-9267",
+   "iri": 1.368,
+   "rate": 0.023416724738675964,
+   "age": 16.46269678302542,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "18-1028",
+   "iri": 1.205,
+   "rate": 0.023416724738675964,
+   "age": 19.846680355920626,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "18-1037",
+   "iri": 0.775,
+   "rate": 0.023416724738675964,
+   "age": 14.002737850787298,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "18-2008",
+   "iri": 0.519,
+   "rate": 0.023416724738675964,
+   "age": 0.05475701574255254,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "18-3002",
+   "iri": 0.884,
+   "rate": 0.023416724738675964,
+   "age": 0.8275154004106753,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "18-3003",
+   "iri": 2.438,
+   "rate": 0.023416724738675964,
+   "age": 23.02190280629702,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "18-5022",
+   "iri": 1.441,
+   "rate": 0.023416724738675964,
+   "age": 8.991786447638788,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "18-5043",
+   "iri": 0.53,
+   "rate": 0.023416724738675964,
+   "age": 2.928815879534568,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "18-5528",
+   "iri": 1.481,
+   "rate": 0.023416724738675964,
+   "age": 11.838466803559186,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "18-5538",
+   "iri": 1.338,
+   "rate": 0.023416724738675964,
+   "age": 11.958932238192801,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "18-6012",
+   "iri": 1.163,
+   "rate": 0.023416724738675964,
+   "age": 11.246406570841827,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "19-0601",
+   "iri": 0.817,
+   "rate": 0.023416724738675964,
+   "age": 0.8822724161532278,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "19-0602",
+   "iri": 0.76,
+   "rate": 0.023416724738675964,
+   "age": 0.8822724161532278,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "19-0605",
+   "iri": 0.732,
+   "rate": 0.023416724738675964,
+   "age": 0.8822724161532278,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "19-1044",
+   "iri": 1.758,
+   "rate": 0.023416724738675964,
+   "age": 20.901437371663178,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "19-3006",
+   "iri": 1.791,
+   "rate": 0.023416724738675964,
+   "age": 16.66598220396986,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "19-3009",
+   "iri": 0.831,
+   "rate": 0.023416724738675964,
+   "age": 2.860369609856207,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "19-3055",
+   "iri": 1.077,
+   "rate": 0.023416724738675964,
+   "age": 15.260095824777409,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "19-6150",
+   "iri": 0.73,
+   "rate": 0.023416724738675964,
+   "age": 12.97535934291568,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "20-1005",
+   "iri": 1.504,
+   "rate": 0.023416724738675964,
+   "age": 8.060232717316921,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "20-3013",
+   "iri": 1.306,
+   "rate": 0.023416724738675964,
+   "age": 8.060232717316921,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "20-6026",
+   "iri": 0.608,
+   "rate": 0.023416724738675964,
+   "age": 8.35592060232716,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "22-0113",
+   "iri": 0.786,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0114",
+   "iri": 0.819,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0115",
+   "iri": 0.699,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0116",
+   "iri": 0.601,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0117",
+   "iri": 0.762,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0118",
+   "iri": 0.674,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0120",
+   "iri": 0.724,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0121",
+   "iri": 0.759,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0122",
+   "iri": 0.665,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0123",
+   "iri": 0.617,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "22-0124",
+   "iri": 0.709,
+   "rate": 0.023416724738675964,
+   "age": 1.1752224503763955,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "23-1028",
+   "iri": 1.238,
+   "rate": 0.023416724738675964,
+   "age": 21.197125256673417,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0901",
+   "iri": 1.056,
+   "rate": 0.023416724738675964,
+   "age": 22.93155373032164,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0902",
+   "iri": 1.209,
+   "rate": 0.023416724738675964,
+   "age": 19.57837097878155,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0903",
+   "iri": 1.36,
+   "rate": 0.023416724738675964,
+   "age": 22.93429158110871,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0960",
+   "iri": 0.908,
+   "rate": 0.023416724738675964,
+   "age": 22.93429158110871,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0961",
+   "iri": 0.913,
+   "rate": 0.023416724738675964,
+   "age": 22.93429158110871,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "24-0962",
+   "iri": 1.328,
+   "rate": 0.023416724738675964,
+   "age": 22.93429158110871,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "24-1634",
+   "iri": 0.819,
+   "rate": 0.023416724738675964,
+   "age": 17.904175222450476,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "24-2401",
+   "iri": 1.667,
+   "rate": 0.023416724738675964,
+   "age": 27.865845311430576,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "24-2805",
+   "iri": 0.989,
+   "rate": 0.023416724738675964,
+   "age": 22.928815879534568,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "25-1004",
+   "iri": 0.777,
+   "rate": 0.023416724738675964,
+   "age": 0.28747433264879874,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0115",
+   "iri": 0.668,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0116",
+   "iri": 0.453,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0117",
+   "iri": 0.528,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0118",
+   "iri": 0.672,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0120",
+   "iri": 0.495,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0121",
+   "iri": 0.443,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "26-0123",
+   "iri": 0.497,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0124",
+   "iri": 0.566,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "26-0159",
+   "iri": 0.66,
+   "rate": 0.023416724738675964,
+   "age": 4.978097193702979,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "27-1018",
+   "iri": 3.575,
+   "rate": 0.023416724738675964,
+   "age": 7.7754962354551935,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "27-1023",
+   "iri": 1.124,
+   "rate": 0.023416724738675964,
+   "age": 18.805612594113654,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "27-1087",
+   "iri": 3.746,
+   "rate": 0.023416724738675964,
+   "age": 1.9397672826830785,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "27-6251",
+   "iri": 1.091,
+   "rate": 0.023416724738675964,
+   "age": 18.805612594113654,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-0805",
+   "iri": 2.569,
+   "rate": 0.023416724738675964,
+   "age": 26.648870636550328,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-0806",
+   "iri": 1.903,
+   "rate": 0.023416724738675964,
+   "age": 26.648870636550328,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-3083",
+   "iri": 2.33,
+   "rate": 0.023416724738675964,
+   "age": 37.71800136892534,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-3085",
+   "iri": 3.583,
+   "rate": 0.023416724738675964,
+   "age": 15.016427104722652,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-3087",
+   "iri": 1.119,
+   "rate": 0.023416724738675964,
+   "age": 8.55099247091016,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-3090",
+   "iri": 1.964,
+   "rate": 0.023416724738675964,
+   "age": 15.811088295687796,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "28-5803",
+   "iri": 0.512,
+   "rate": 0.023416724738675964,
+   "age": 9.94250513347015,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "29-0801",
+   "iri": 1.403,
+   "rate": 0.023416724738675964,
+   "age": 27.260095824777636,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-0802",
+   "iri": 1.132,
+   "rate": 0.023416724738675964,
+   "age": 27.260095824777636,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA01",
+   "iri": 0.547,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA02",
+   "iri": 0.587,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA03",
+   "iri": 0.534,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "29-AA61",
+   "iri": 0.656,
+   "rate": 0.023416724738675964,
+   "age": 8.504449007529047,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "29-AA62",
+   "iri": 0.805,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA63",
+   "iri": 0.672,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA64",
+   "iri": 0.886,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA65",
+   "iri": 0.817,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA66",
+   "iri": 0.713,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "29-AA67",
+   "iri": 0.718,
+   "rate": 0.023416724738675964,
+   "age": 8.507186858316345,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0113",
+   "iri": 2.653,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0114",
+   "iri": 0.727,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0115",
+   "iri": 0.668,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0116",
+   "iri": 0.821,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0117",
+   "iri": 0.674,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0118",
+   "iri": 0.746,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0119",
+   "iri": 0.683,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0120",
+   "iri": 2.966,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0121",
+   "iri": 2.581,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0122",
+   "iri": 1.705,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0123",
+   "iri": 0.596,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0124",
+   "iri": 0.57,
+   "rate": 0.023416724738675964,
+   "age": 0.1368925393567224,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-0805",
+   "iri": 1.451,
+   "rate": 0.023416724738675964,
+   "age": 18.893223819301966,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0806",
+   "iri": 1.232,
+   "rate": 0.023416724738675964,
+   "age": 18.893223819301966,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0901",
+   "iri": 1.689,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0902",
+   "iri": 1.101,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-0903",
+   "iri": 2.127,
+   "rate": 0.023416724738675964,
+   "age": 11.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-6004",
+   "iri": 2.362,
+   "rate": 0.023416724738675964,
+   "age": 16.956194387405958,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-7075",
+   "iri": 1.171,
+   "rate": 0.023416724738675964,
+   "age": 8.249144421629126,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "30-7076",
+   "iri": 0.616,
+   "rate": 0.023416724738675964,
+   "age": 3.0793976728268717,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "30-8129",
+   "iri": 0.865,
+   "rate": 0.023416724738675964,
+   "age": 22.38877481177269,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "31-3024",
+   "iri": 0.585,
+   "rate": 0.023416724738675964,
+   "age": 7.232717316906246,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "31-4019",
+   "iri": 0.64,
+   "rate": 0.023416724738675964,
+   "age": 6.882272416153455,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-1020",
+   "iri": 0.531,
+   "rate": 0.023416724738675964,
+   "age": 1.9206023271731283,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-AA01",
+   "iri": 0.622,
+   "rate": 0.023416724738675964,
+   "age": 8.720739219712414,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "32-AA02",
+   "iri": 0.527,
+   "rate": 0.023416724738675964,
+   "age": 8.712525667350974,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-AA03",
+   "iri": 0.783,
+   "rate": 0.023416724738675964,
+   "age": 8.720739219712414,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-AA59",
+   "iri": 0.679,
+   "rate": 0.023416724738675964,
+   "age": 8.720739219712414,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-AA60",
+   "iri": 0.591,
+   "rate": 0.023416724738675964,
+   "age": 8.720739219712414,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "32-AA61",
+   "iri": 0.677,
+   "rate": 0.023416724738675964,
+   "age": 8.712525667350974,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "32-AA62",
+   "iri": 0.543,
+   "rate": 0.023416724738675964,
+   "age": 8.712525667350974,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "33-1001",
+   "iri": 0.543,
+   "rate": 0.023416724738675964,
+   "age": 6.745379876796733,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "34-0502",
+   "iri": 1.869,
+   "rate": 0.023416724738675964,
+   "age": 17.550992470910387,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0503",
+   "iri": 1.047,
+   "rate": 0.023416724738675964,
+   "age": 17.61122518822731,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0504",
+   "iri": 1.064,
+   "rate": 0.023416724738675964,
+   "age": 17.608487337440238,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0505",
+   "iri": 1.093,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0506",
+   "iri": 0.93,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0507",
+   "iri": 0.984,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0508",
+   "iri": 1.011,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0509",
+   "iri": 0.915,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0559",
+   "iri": 1.031,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0560",
+   "iri": 1.188,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0901",
+   "iri": 1.312,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "34-0902",
+   "iri": 0.956,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "34-0903",
+   "iri": 1.126,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0960",
+   "iri": 1.04,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0961",
+   "iri": 1.357,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-0962",
+   "iri": 1.377,
+   "rate": 0.023416724738675964,
+   "age": 11.876796714579086,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-1011",
+   "iri": 1.368,
+   "rate": 0.023416724738675964,
+   "age": 11.860369609856207,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "34-1033",
+   "iri": 2.139,
+   "rate": 0.023416724738675964,
+   "age": 7.923340177960199,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-0801",
+   "iri": 1.534,
+   "rate": 0.023416724738675964,
+   "age": 27.254620123203267,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-0802",
+   "iri": 1.591,
+   "rate": 0.023416724738675964,
+   "age": 27.254620123203267,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-2118",
+   "iri": 1.203,
+   "rate": 0.023416724738675964,
+   "age": 16.94524298425722,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-6033",
+   "iri": 0.486,
+   "rate": 0.023416724738675964,
+   "age": 3.5592060232715994,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "35-AA01",
+   "iri": 0.712,
+   "rate": 0.023416724738675964,
+   "age": 6.496235455167607,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-AA02",
+   "iri": 0.803,
+   "rate": 0.023416724738675964,
+   "age": 11.076659822039574,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-AA03",
+   "iri": 0.787,
+   "rate": 0.023416724738675964,
+   "age": 11.084873374401013,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-AA61",
+   "iri": 0.959,
+   "rate": 0.023416724738675964,
+   "age": 11.084873374401013,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "35-AA62",
+   "iri": 1.35,
+   "rate": 0.023416724738675964,
+   "age": 11.016427104722652,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-0801",
+   "iri": 1.924,
+   "rate": 0.023416724738675964,
+   "age": 28.158795345653743,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-0802",
+   "iri": 2.334,
+   "rate": 0.023416724738675964,
+   "age": 28.158795345653743,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-0859",
+   "iri": 1.808,
+   "rate": 0.023416724738675964,
+   "age": 28.158795345653743,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1028",
+   "iri": 1.133,
+   "rate": 0.023416724738675964,
+   "age": 12.5592060232716,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1352",
+   "iri": 1.191,
+   "rate": 0.023416724738675964,
+   "age": 15.767282683093754,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1645",
+   "iri": 0.76,
+   "rate": 0.023416724738675964,
+   "age": 6.763860369610029,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1801",
+   "iri": 0.489,
+   "rate": 0.023416724738675964,
+   "age": 4.96440793976717,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "37-1803",
+   "iri": 1.683,
+   "rate": 0.023416724738675964,
+   "age": 18.93702943189578,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "37-1814",
+   "iri": 1.513,
+   "rate": 0.023416724738675964,
+   "age": 18.726214921286783,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1817",
+   "iri": 1.357,
+   "rate": 0.023416724738675964,
+   "age": 12.460643394935005,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-1992",
+   "iri": 0.797,
+   "rate": 0.023416724738675964,
+   "age": 7.7262149212867826,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-2819",
+   "iri": 0.637,
+   "rate": 0.023416724738675964,
+   "age": 5.879534565366157,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "37-2824",
+   "iri": 0.97,
+   "rate": 0.023416724738675964,
+   "age": 11.69883641341562,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "37-3008",
+   "iri": 0.794,
+   "rate": 0.023416724738675964,
+   "age": 6.871321013004717,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "39-0104",
+   "iri": 0.683,
+   "rate": 0.023416724738675964,
+   "age": 3.997262149212929,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-0111",
+   "iri": 0.867,
+   "rate": 0.023416724738675964,
+   "age": 9.005475701574369,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "39-0112",
+   "iri": 0.686,
+   "rate": 0.023416724738675964,
+   "age": 3.997262149212929,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-0159",
+   "iri": 1.3,
+   "rate": 0.023416724738675964,
+   "age": 5.808350444900725,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "39-0160",
+   "iri": 1.89,
+   "rate": 0.023416724738675964,
+   "age": 5.723477070499712,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-0901",
+   "iri": 0.861,
+   "rate": 0.023416724738675964,
+   "age": 4.0,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-0902",
+   "iri": 1.392,
+   "rate": 0.023416724738675964,
+   "age": 22.41615331964408,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "39-0903",
+   "iri": 0.74,
+   "rate": 0.023416724738675964,
+   "age": 4.0,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-3013",
+   "iri": 1.365,
+   "rate": 0.023416724738675964,
+   "age": 12.07392197125273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "39-3801",
+   "iri": 1.058,
+   "rate": 0.023416724738675964,
+   "age": 10.446269678302542,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-4018",
+   "iri": 1.555,
+   "rate": 0.023416724738675964,
+   "age": 3.8165639972619374,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-5003",
+   "iri": 0.622,
+   "rate": 0.023416724738675964,
+   "age": 4.503764544832393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "39-9006",
+   "iri": 1.229,
+   "rate": 0.023416724738675964,
+   "age": 12.260095824777409,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "39-A803",
+   "iri": 2.389,
+   "rate": 0.023416724738675964,
+   "age": 14.802874743326583,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "39-A804",
+   "iri": 1.638,
+   "rate": 0.023416724738675964,
+   "age": 18.04654346338134,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-0114",
+   "iri": 1.081,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0115",
+   "iri": 0.703,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0116",
+   "iri": 0.76,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0117",
+   "iri": 0.599,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0118",
+   "iri": 1.099,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0119",
+   "iri": 0.538,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0120",
+   "iri": 0.547,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0121",
+   "iri": 0.597,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0123",
+   "iri": 0.603,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0124",
+   "iri": 0.545,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0160",
+   "iri": 0.816,
+   "rate": 0.023416724738675964,
+   "age": 1.6796714579056697,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0502",
+   "iri": 0.811,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0503",
+   "iri": 0.664,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0504",
+   "iri": 0.655,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0505",
+   "iri": 0.628,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0506",
+   "iri": 0.688,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0507",
+   "iri": 0.629,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0508",
+   "iri": 0.716,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0509",
+   "iri": 0.593,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0560",
+   "iri": 0.578,
+   "rate": 0.023416724738675964,
+   "age": 2.603011635865869,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0603",
+   "iri": 1.744,
+   "rate": 0.023416724738675964,
+   "age": 17.608487337440238,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-0604",
+   "iri": 1.75,
+   "rate": 0.023416724738675964,
+   "age": 17.608487337440238,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-0606",
+   "iri": 1.732,
+   "rate": 0.023416724738675964,
+   "age": 17.63039014373726,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "40-0607",
+   "iri": 1.502,
+   "rate": 0.023416724738675964,
+   "age": 8.608487337440238,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-0608",
+   "iri": 3.041,
+   "rate": 0.023416724738675964,
+   "age": 17.64134154688577,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-4086",
+   "iri": 1.856,
+   "rate": 0.023416724738675964,
+   "age": 10.854893908282065,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-4154",
+   "iri": 0.83,
+   "rate": 0.023416724738675964,
+   "age": 2.6057494866529396,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-4164",
+   "iri": 2.396,
+   "rate": 0.023416724738675964,
+   "age": 15.583846680355919,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-AA01",
+   "iri": 1.345,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-AA02",
+   "iri": 1.005,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "40-AA03",
+   "iri": 0.743,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "40-AA61",
+   "iri": 1.184,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "40-AA62",
+   "iri": 0.949,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "40-AA63",
+   "iri": 1.439,
+   "rate": 0.023416724738675964,
+   "age": 10.021902806297021,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-2002",
+   "iri": 1.468,
+   "rate": 0.023416724738675964,
+   "age": 23.191649555099275,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "41-5006",
+   "iri": 0.491,
+   "rate": 0.023416724738675964,
+   "age": 5.279260780287586,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-5008",
+   "iri": 0.593,
+   "rate": 0.023416724738675964,
+   "age": 5.279260780287586,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-AA01",
+   "iri": 0.488,
+   "rate": 0.023416724738675964,
+   "age": 8.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-AA02",
+   "iri": 0.389,
+   "rate": 0.023416724738675964,
+   "age": 8.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-AA03",
+   "iri": 0.482,
+   "rate": 0.023416724738675964,
+   "age": 8.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-AA59",
+   "iri": 0.538,
+   "rate": 0.023416724738675964,
+   "age": 8.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "41-AA60",
+   "iri": 0.514,
+   "rate": 0.023416724738675964,
+   "age": 8.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "42-1597",
+   "iri": 0.754,
+   "rate": 0.023416724738675964,
+   "age": 5.30937713894582,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "42-1599",
+   "iri": 1.086,
+   "rate": 0.023416724738675964,
+   "age": 6.06570841889129,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "42-1606",
+   "iri": 0.863,
+   "rate": 0.023416724738675964,
+   "age": 7.8466803559206255,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "42-1614",
+   "iri": 1.403,
+   "rate": 0.023416724738675964,
+   "age": 15.94250513347015,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "42-1623",
+   "iri": 1.322,
+   "rate": 0.023416724738675964,
+   "age": 15.435318275153804,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "42-1691",
+   "iri": 0.437,
+   "rate": 0.023416724738675964,
+   "age": 1.1889117043122042,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "44-7401",
+   "iri": 1.289,
+   "rate": 0.023416724738675964,
+   "age": 18.243668720054757,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "45-1024",
+   "iri": 1.619,
+   "rate": 0.023416724738675964,
+   "age": 36.95619438740596,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "46-0601",
+   "iri": 0.878,
+   "rate": 0.023416724738675964,
+   "age": 5.511978097193605,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0602",
+   "iri": 1.386,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0603",
+   "iri": 2.191,
+   "rate": 0.023416724738675964,
+   "age": 6.863107460643505,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "46-0604",
+   "iri": 0.972,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0605",
+   "iri": 1.202,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0606",
+   "iri": 0.619,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0607",
+   "iri": 1.861,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "46-0608",
+   "iri": 1.71,
+   "rate": 0.023416724738675964,
+   "age": 6.863107460643505,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "46-0660",
+   "iri": 0.993,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "46-0661",
+   "iri": 0.617,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0662",
+   "iri": 1.801,
+   "rate": 0.023416724738675964,
+   "age": 14.177960301163466,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "46-0803",
+   "iri": 0.628,
+   "rate": 0.023416724738675964,
+   "age": 0.31211498973289054,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0804",
+   "iri": 0.724,
+   "rate": 0.023416724738675964,
+   "age": 0.31211498973289054,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-0859",
+   "iri": 0.828,
+   "rate": 0.023416724738675964,
+   "age": 0.31211498973289054,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-3013",
+   "iri": 0.578,
+   "rate": 0.023416724738675964,
+   "age": 0.6440793976728401,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-9106",
+   "iri": 2.968,
+   "rate": 0.023416724738675964,
+   "age": 6.819301848049236,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "46-9197",
+   "iri": 1.228,
+   "rate": 0.023416724738675964,
+   "age": 1.2546201232032672,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "47-1028",
+   "iri": 0.872,
+   "rate": 0.023416724738675964,
+   "age": 19.6358658453114,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "47-1029",
+   "iri": 0.723,
+   "rate": 0.023416724738675964,
+   "age": 4.586584531142989,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "47-2001",
+   "iri": 0.802,
+   "rate": 0.023416724738675964,
+   "age": 4.463381245722303,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "47-2008",
+   "iri": 1.031,
+   "rate": 0.023416724738675964,
+   "age": 15.08487337440124,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "47-3109",
+   "iri": 1.321,
+   "rate": 0.023416724738675964,
+   "age": 21.852156057494994,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-0801",
+   "iri": 2.178,
+   "rate": 0.023416724738675964,
+   "age": 11.169746748802254,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-0802",
+   "iri": 1.656,
+   "rate": 0.023416724738675964,
+   "age": 11.169746748802254,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "48-0901",
+   "iri": 1.9,
+   "rate": 0.023416724738675964,
+   "age": 21.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-0902",
+   "iri": 1.047,
+   "rate": 0.023416724738675964,
+   "age": 21.147843942505233,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "48-0903",
+   "iri": 1.207,
+   "rate": 0.023416724738675964,
+   "age": 21.147843942505233,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-1056",
+   "iri": 1.893,
+   "rate": 0.023416724738675964,
+   "age": 9.811088295688023,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-1076",
+   "iri": 2.681,
+   "rate": 0.023416724738675964,
+   "age": 5.564681724845968,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-1087",
+   "iri": 1.338,
+   "rate": 0.023416724738675964,
+   "age": 4.671457905544003,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-1092",
+   "iri": 3.046,
+   "rate": 0.023416724738675964,
+   "age": 4.0164271047228794,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-1096",
+   "iri": 2.113,
+   "rate": 0.023416724738675964,
+   "age": 2.8713210130047173,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-1111",
+   "iri": 1.085,
+   "rate": 0.023416724738675964,
+   "age": 8.416153319644081,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "48-2108",
+   "iri": 0.777,
+   "rate": 0.023416724738675964,
+   "age": 1.9096509240248452,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-2176",
+   "iri": 0.922,
+   "rate": 0.023416724738675964,
+   "age": 4.8740588637920155,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-3669",
+   "iri": 1.259,
+   "rate": 0.023416724738675964,
+   "age": 3.024640657084092,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-3835",
+   "iri": 1.127,
+   "rate": 0.023416724738675964,
+   "age": 9.753593429158173,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-3855",
+   "iri": 1.575,
+   "rate": 0.023416724738675964,
+   "age": 9.441478439425055,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-3865",
+   "iri": 1.098,
+   "rate": 0.023416724738675964,
+   "age": 8.518138261464856,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-5154",
+   "iri": 0.618,
+   "rate": 0.023416724738675964,
+   "age": 7.764544832306683,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-5274",
+   "iri": 1.167,
+   "rate": 0.023416724738675964,
+   "age": 2.906913073237547,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-5335",
+   "iri": 1.024,
+   "rate": 0.023416724738675964,
+   "age": 2.507186858316345,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-9005",
+   "iri": 2.572,
+   "rate": 0.023416724738675964,
+   "age": 15.68240930869274,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "48-A502",
+   "iri": 1.561,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A503",
+   "iri": 1.496,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "48-A504",
+   "iri": 1.842,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A505",
+   "iri": 2.309,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A506",
+   "iri": 1.737,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A507",
+   "iri": 1.897,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A508",
+   "iri": 1.605,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-A509",
+   "iri": 1.567,
+   "rate": 0.023416724738675964,
+   "age": 0.5920602327173583,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-AA01",
+   "iri": 0.889,
+   "rate": 0.023416724738675964,
+   "age": 5.093086926762453,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "48-AA02",
+   "iri": 0.995,
+   "rate": 0.023416724738675964,
+   "age": 5.087611225188084,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "48-AA03",
+   "iri": 1.135,
+   "rate": 0.023416724738675964,
+   "age": 4.076659822039801,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "49-0803",
+   "iri": 1.039,
+   "rate": 0.023416724738675964,
+   "age": 25.205338809034856,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "49-0804",
+   "iri": 0.883,
+   "rate": 0.023416724738675964,
+   "age": 25.205338809034856,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "49-1001",
+   "iri": 1.462,
+   "rate": 0.023416724738675964,
+   "age": 1.7891854893907748,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "50-1004",
+   "iri": 0.621,
+   "rate": 0.023416724738675964,
+   "age": 2.1779603011634663,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "50-1682",
+   "iri": 0.774,
+   "rate": 0.023416724738675964,
+   "age": 6.323066392881401,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "50-1683",
+   "iri": 0.737,
+   "rate": 0.023416724738675964,
+   "age": 6.323066392881401,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "51-0114",
+   "iri": 1.495,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0115",
+   "iri": 0.897,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0116",
+   "iri": 0.971,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "51-0117",
+   "iri": 0.873,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0118",
+   "iri": 0.806,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0119",
+   "iri": 1.262,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0120",
+   "iri": 1.151,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0121",
+   "iri": 1.194,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0122",
+   "iri": 0.949,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0123",
+   "iri": 0.831,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0124",
+   "iri": 0.896,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-0159",
+   "iri": 1.056,
+   "rate": 0.023416724738675964,
+   "age": 6.942505133470149,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "51-1417",
+   "iri": 1.246,
+   "rate": 0.023416724738675964,
+   "age": 12.312114989733118,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-1419",
+   "iri": 1.14,
+   "rate": 0.023416724738675964,
+   "age": 5.975359342915908,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "51-1423",
+   "iri": 1.855,
+   "rate": 0.023416724738675964,
+   "age": 19.188911704312204,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "51-2564",
+   "iri": 0.699,
+   "rate": 0.023416724738675964,
+   "age": 7.3613963039013015,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-0801",
+   "iri": 1.675,
+   "rate": 0.023416724738675964,
+   "age": 10.854893908281838,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-0802",
+   "iri": 1.457,
+   "rate": 0.023416724738675964,
+   "age": 17.134154688569424,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "53-1007",
+   "iri": 0.831,
+   "rate": 0.023416724738675964,
+   "age": 9.284736481861728,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "53-6056",
+   "iri": 0.98,
+   "rate": 0.023416724738675964,
+   "age": 9.227241615331877,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "53-7322",
+   "iri": 0.74,
+   "rate": 0.023416724738675964,
+   "age": 4.049281314168411,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-AA01",
+   "iri": 0.737,
+   "rate": 0.023416724738675964,
+   "age": 10.229979466119175,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "53-AA02",
+   "iri": 0.845,
+   "rate": 0.023416724738675964,
+   "age": 3.9863107460644187,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-AA03",
+   "iri": 0.862,
+   "rate": 0.023416724738675964,
+   "age": 10.229979466119175,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-BA01",
+   "iri": 0.825,
+   "rate": 0.023416724738675964,
+   "age": 10.229979466119175,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-BA59",
+   "iri": 0.723,
+   "rate": 0.023416724738675964,
+   "age": 3.9863107460644187,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "53-BA60",
+   "iri": 0.932,
+   "rate": 0.023416724738675964,
+   "age": 10.229979466119175,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "54-1640",
+   "iri": 0.99,
+   "rate": 0.023416724738675964,
+   "age": 18.224503764544806,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "54-4004",
+   "iri": 0.996,
+   "rate": 0.023416724738675964,
+   "age": 1.229979466118948,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0805",
+   "iri": 1.685,
+   "rate": 0.023416724738675964,
+   "age": 27.829568788501092,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "55-0806",
+   "iri": 1.728,
+   "rate": 0.023416724738675964,
+   "age": 27.829568788501092,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "55-0901",
+   "iri": 0.604,
+   "rate": 0.023416724738675964,
+   "age": 0.9644079397671703,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0902",
+   "iri": 0.575,
+   "rate": 0.023416724738675964,
+   "age": 0.9644079397671703,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0903",
+   "iri": 0.496,
+   "rate": 0.023416724738675964,
+   "age": 0.9644079397671703,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0907",
+   "iri": 0.512,
+   "rate": 0.023416724738675964,
+   "age": 0.9644079397671703,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0908",
+   "iri": 0.494,
+   "rate": 0.023416724738675964,
+   "age": 0.9644079397671703,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-0909",
+   "iri": 1.9,
+   "rate": 0.023416724738675964,
+   "age": 19.093086926762453,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "55-A901",
+   "iri": 0.568,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-A902",
+   "iri": 0.762,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-A903",
+   "iri": 0.835,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-A907",
+   "iri": 0.946,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-A908",
+   "iri": 0.679,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-A909",
+   "iri": 0.75,
+   "rate": 0.023416724738675964,
+   "age": 2.2929500342231677,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-B901",
+   "iri": 0.581,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-B902",
+   "iri": 0.696,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "55-B903",
+   "iri": 0.654,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-B907",
+   "iri": 0.695,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-B908",
+   "iri": 0.876,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "55-B909",
+   "iri": 0.76,
+   "rate": 0.023416724738675964,
+   "age": 3.8932238193017383,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "56-2017",
+   "iri": 0.805,
+   "rate": 0.023416724738675964,
+   "age": 4.284736481861728,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "56-2020",
+   "iri": 1.866,
+   "rate": 0.023416724738675964,
+   "age": 19.150581793292076,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "56-7772",
+   "iri": 1.108,
+   "rate": 0.023416724738675964,
+   "age": 4.279260780287359,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "56-7773",
+   "iri": 1.381,
+   "rate": 0.023416724738675964,
+   "age": 4.287474332648799,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "56-7775",
+   "iri": 1.041,
+   "rate": 0.023416724738675964,
+   "age": 6.243668720054757,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "81-1803",
+   "iri": 1.653,
+   "rate": 0.023416724738675964,
+   "age": 18.874058863791788,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "81-1804",
+   "iri": 2.643,
+   "rate": 0.023416724738675964,
+   "age": 18.849418206707696,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "81-1805",
+   "iri": 1.938,
+   "rate": 0.023416724738675964,
+   "age": 15.906913073237547,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "81-8529",
+   "iri": 1.302,
+   "rate": 0.023416724738675964,
+   "age": 1.67145790554423,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "81-A901",
+   "iri": 1.338,
+   "rate": 0.023416724738675964,
+   "age": 3.901437371663178,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "81-A902",
+   "iri": 1.274,
+   "rate": 0.023416724738675964,
+   "age": 3.901437371663178,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "81-A903",
+   "iri": 1.44,
+   "rate": 0.023416724738675964,
+   "age": 3.901437371663178,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "82-6006",
+   "iri": 0.968,
+   "rate": 0.023416724738675964,
+   "age": 17.800136892539513,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "82-6007",
+   "iri": 0.807,
+   "rate": 0.023416724738675964,
+   "age": 4.67145790554423,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0502",
+   "iri": 1.842,
+   "rate": 0.023416724738675964,
+   "age": 7.759069130732314,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0503",
+   "iri": 1.285,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0504",
+   "iri": 1.221,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0505",
+   "iri": 1.738,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0506",
+   "iri": 2.092,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0507",
+   "iri": 1.091,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0508",
+   "iri": 1.028,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-0509",
+   "iri": 1.77,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-6450",
+   "iri": 1.001,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-6451",
+   "iri": 1.554,
+   "rate": 0.023416724738675964,
+   "age": 7.698836413415393,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "83-6454",
+   "iri": 2.323,
+   "rate": 0.023416724738675964,
+   "age": 8.00821355236144,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "83-AA01",
+   "iri": 0.777,
+   "rate": 0.023416724738675964,
+   "age": 6.01916495550995,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "83-AA02",
+   "iri": 0.692,
+   "rate": 0.023416724738675964,
+   "age": 6.01916495550995,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "83-AA03",
+   "iri": 0.745,
+   "rate": 0.023416724738675964,
+   "age": 6.0328542094455315,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "83-AA61",
+   "iri": 0.783,
+   "rate": 0.023416724738675964,
+   "age": 6.0328542094455315,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "85-1808",
+   "iri": 0.855,
+   "rate": 0.023416724738675964,
+   "age": 32.08487337440101,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "86-6802",
+   "iri": 0.569,
+   "rate": 0.023416724738675964,
+   "age": 1.306639288158749,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-0901",
+   "iri": 2.955,
+   "rate": 0.023416724738675964,
+   "age": 20.937029431896008,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "87-0902",
+   "iri": 2.985,
+   "rate": 0.023416724738675964,
+   "age": 20.937029431896008,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-0903",
+   "iri": 1.27,
+   "rate": 0.023416724738675964,
+   "age": 2.5865845311432167,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "87-0960",
+   "iri": 1.117,
+   "rate": 0.023416724738675964,
+   "age": 2.5865845311432167,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-0961",
+   "iri": 0.933,
+   "rate": 0.023416724738675964,
+   "age": 2.5865845311432167,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "87-0962",
+   "iri": 0.88,
+   "rate": 0.023416724738675964,
+   "age": 20.937029431896008,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "87-1622",
+   "iri": 1.375,
+   "rate": 0.023416724738675964,
+   "age": 17.863107460643278,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "87-1680",
+   "iri": 0.63,
+   "rate": 0.023416724738675964,
+   "age": 3.687885010266882,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-1806",
+   "iri": 0.995,
+   "rate": 0.023416724738675964,
+   "age": 3.687885010266882,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "87-AA01",
+   "iri": 0.588,
+   "rate": 0.023416724738675964,
+   "age": 8.027378507871163,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-AA02",
+   "iri": 0.499,
+   "rate": 0.023416724738675964,
+   "age": 8.01095140314851,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-AA03",
+   "iri": 0.687,
+   "rate": 0.023416724738675964,
+   "age": 7.994524298425631,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-AA61",
+   "iri": 0.518,
+   "rate": 0.023416724738675964,
+   "age": 7.9890485968514895,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-AA62",
+   "iri": 0.528,
+   "rate": 0.023416724738675964,
+   "age": 7.9835728952771206,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-BA01",
+   "iri": 0.531,
+   "rate": 0.023416724738675964,
+   "age": 8.024640657084092,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-BA02",
+   "iri": 0.52,
+   "rate": 0.023416724738675964,
+   "age": 8.00273785078707,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-BA03",
+   "iri": 0.552,
+   "rate": 0.023416724738675964,
+   "age": 7.99178644763856,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-BA61",
+   "iri": 0.548,
+   "rate": 0.023416724738675964,
+   "age": 7.986310746064191,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "87-BA62",
+   "iri": 0.542,
+   "rate": 0.023416724738675964,
+   "age": 7.97262149212861,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "88-1645",
+   "iri": 2.054,
+   "rate": 0.023416724738675964,
+   "age": 28.246406570841827,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "89-0901",
+   "iri": 0.635,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-0902",
+   "iri": 0.696,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-0903",
+   "iri": 0.847,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-1021",
+   "iri": 0.932,
+   "rate": 0.023416724738675964,
+   "age": 4.199863107460715,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-3001",
+   "iri": 0.823,
+   "rate": 0.023416724738675964,
+   "age": 6.405201916495571,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-3015",
+   "iri": 1.112,
+   "rate": 0.023416724738675964,
+   "age": 13.745379876796733,
+   "eligible": [
+    "major_rehab"
+   ]
+  },
+  {
+   "sid": "89-A901",
+   "iri": 0.766,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  },
+  {
+   "sid": "89-A902",
+   "iri": 0.682,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab"
+   ]
+  },
+  {
+   "sid": "89-A903",
+   "iri": 0.714,
+   "rate": 0.023416724738675964,
+   "age": 6.402464065708273,
+   "eligible": [
+    "major_rehab",
+    "minor_rehab",
+    "preventive"
+   ]
+  }
+ ],
+ "base_mip_plan": [
+  [
+   "04-1025",
+   1,
+   "minor_rehab"
+  ],
+  [
+   "04-AA60",
+   1,
+   "preventive"
+  ],
+  [
+   "04-AA61",
+   1,
+   "preventive"
+  ],
+  [
+   "04-BA60",
+   4,
+   "preventive"
+  ],
+  [
+   "04-BA61",
+   5,
+   "preventive"
+  ],
+  [
+   "06-8150",
+   5,
+   "preventive"
+  ],
+  [
+   "06-A805",
+   2,
+   "preventive"
+  ],
+  [
+   "12-4096",
+   5,
+   "minor_rehab"
+  ],
+  [
+   "13-7028",
+   4,
+   "preventive"
+  ],
+  [
+   "17-5151",
+   2,
+   "preventive"
+  ],
+  [
+   "18-1028",
+   3,
+   "preventive"
+  ],
+  [
+   "18-5022",
+   1,
+   "preventive"
+  ],
+  [
+   "20-3013",
+   2,
+   "preventive"
+  ],
+  [
+   "23-1028",
+   2,
+   "preventive"
+  ],
+  [
+   "24-0901",
+   5,
+   "preventive"
+  ],
+  [
+   "24-0902",
+   3,
+   "preventive"
+  ],
+  [
+   "24-0903",
+   2,
+   "preventive"
+  ],
+  [
+   "24-0962",
+   5,
+   "minor_rehab"
+  ],
+  [
+   "27-1018",
+   3,
+   "major_rehab"
+  ],
+  [
+   "27-1087",
+   2,
+   "major_rehab"
+  ],
+  [
+   "28-3085",
+   2,
+   "major_rehab"
+  ],
+  [
+   "30-0113",
+   5,
+   "major_rehab"
+  ],
+  [
+   "30-0120",
+   4,
+   "major_rehab"
+  ],
+  [
+   "30-6004",
+   1,
+   "preventive"
+  ],
+  [
+   "34-0901",
+   5,
+   "minor_rehab"
+  ],
+  [
+   "37-1803",
+   1,
+   "preventive"
+  ],
+  [
+   "39-0160",
+   1,
+   "preventive"
+  ],
+  [
+   "39-0902",
+   3,
+   "minor_rehab"
+  ],
+  [
+   "39-3013",
+   4,
+   "minor_rehab"
+  ],
+  [
+   "39-3801",
+   5,
+   "preventive"
+  ],
+  [
+   "39-4018",
+   1,
+   "preventive"
+  ],
+  [
+   "39-9006",
+   3,
+   "preventive"
+  ],
+  [
+   "40-0114",
+   5,
+   "preventive"
+  ],
+  [
+   "40-0118",
+   4,
+   "preventive"
+  ],
+  [
+   "40-0606",
+   2,
+   "minor_rehab"
+  ],
+  [
+   "40-0607",
+   1,
+   "preventive"
+  ],
+  [
+   "40-0608",
+   4,
+   "major_rehab"
+  ],
+  [
+   "40-4164",
+   1,
+   "preventive"
+  ],
+  [
+   "40-AA63",
+   1,
+   "preventive"
+  ],
+  [
+   "41-2002",
+   3,
+   "minor_rehab"
+  ],
+  [
+   "42-1599",
+   4,
+   "preventive"
+  ],
+  [
+   "42-1614",
+   4,
+   "minor_rehab"
+  ],
+  [
+   "42-1623",
+   2,
+   "preventive"
+  ],
+  [
+   "44-7401",
+   2,
+   "preventive"
+  ],
+  [
+   "46-0602",
+   2,
+   "preventive"
+  ],
+  [
+   "46-0603",
+   1,
+   "minor_rehab"
+  ],
+  [
+   "46-0605",
+   3,
+   "preventive"
+  ],
+  [
+   "46-9106",
+   1,
+   "minor_rehab"
+  ],
+  [
+   "46-9197",
+   3,
+   "preventive"
+  ],
+  [
+   "48-0801",
+   1,
+   "preventive"
+  ],
+  [
+   "48-0802",
+   2,
+   "minor_rehab"
+  ],
+  [
+   "48-1076",
+   5,
+   "major_rehab"
+  ],
+  [
+   "48-1087",
+   2,
+   "preventive"
+  ],
+  [
+   "48-1092",
+   3,
+   "major_rehab"
+  ],
+  [
+   "48-1096",
+   1,
+   "preventive"
+  ],
+  [
+   "48-3669",
+   2,
+   "preventive"
+  ],
+  [
+   "48-3835",
+   3,
+   "preventive"
+  ],
+  [
+   "48-3855",
+   1,
+   "preventive"
+  ],
+  [
+   "48-3865",
+   4,
+   "preventive"
+  ],
+  [
+   "48-5274",
+   3,
+   "preventive"
+  ],
+  [
+   "48-A502",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A503",
+   3,
+   "minor_rehab"
+  ],
+  [
+   "48-A504",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A505",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A506",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A507",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A508",
+   1,
+   "preventive"
+  ],
+  [
+   "48-A509",
+   1,
+   "preventive"
+  ],
+  [
+   "48-AA03",
+   3,
+   "preventive"
+  ],
+  [
+   "49-0803",
+   5,
+   "preventive"
+  ],
+  [
+   "51-0159",
+   5,
+   "preventive"
+  ],
+  [
+   "51-1419",
+   3,
+   "preventive"
+  ],
+  [
+   "53-0801",
+   1,
+   "preventive"
+  ],
+  [
+   "56-7772",
+   3,
+   "preventive"
+  ],
+  [
+   "56-7773",
+   2,
+   "preventive"
+  ],
+  [
+   "56-7775",
+   5,
+   "preventive"
+  ],
+  [
+   "81-1803",
+   1,
+   "minor_rehab"
+  ],
+  [
+   "81-8529",
+   2,
+   "preventive"
+  ],
+  [
+   "81-A901",
+   5,
+   "minor_rehab"
+  ],
+  [
+   "81-A902",
+   2,
+   "preventive"
+  ],
+  [
+   "81-A903",
+   1,
+   "preventive"
+  ],
+  [
+   "83-6454",
+   1,
+   "preventive"
+  ],
+  [
+   "87-0901",
+   4,
+   "major_rehab"
+  ],
+  [
+   "87-0902",
+   1,
+   "minor_rehab"
+  ],
+  [
+   "87-0960",
+   3,
+   "preventive"
+  ]
+ ]
+}

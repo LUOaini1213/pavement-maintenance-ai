@@ -1,0 +1,625 @@
+{
+ "horizon_years": 5,
+ "years": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "network": {
+  "candidates": 499,
+  "sections": 491,
+  "excluded_without_rut_or_cracking": 8,
+  "lane_km": 491.0,
+  "mean_iri": 1.1232993890020366,
+  "max_iri": 3.746,
+  "share_iri_above_1p5": 0.1934826883910387,
+  "median_cracking_pct": 2.0,
+  "median_rut_mm": 4.0,
+  "rqi_grade_shares": {
+   "excellent": 0.9490835030549898,
+   "good": 0.04480651731160896,
+   "average": 0.006109979633401222,
+   "poor": 0.0,
+   "failed": 0.0
+  },
+  "pci_grade_shares": {
+   "excellent": 0.42362525458248473,
+   "good": 0.08961303462321792,
+   "average": 0.06313645621181263,
+   "poor": 0.054989816700611,
+   "failed": 0.36863543788187375
+  },
+  "rdi_grade_shares": {
+   "excellent": 0.945010183299389,
+   "good": 0.03665987780040733,
+   "average": 0.012219959266802444,
+   "poor": 0.004073319755600814,
+   "failed": 0.002036659877800407
+  },
+  "share_eligible_preventive": 0.4908350305498982,
+  "share_eligible_minor_rehab": 0.5763747454175153,
+  "rate_model": "global_rate",
+  "global_rate": 0.023416724738675964,
+  "rate_median": 0.023416724738675964,
+  "rate_p90": 0.023416724738675964,
+  "median_age": 8.049281314168411
+ },
+ "rate_model_reason": "boosting did not beat the best baseline under forward validation, so the baseline's network-wide rate is used",
+ "resurfacing_whole_network": 101290.96078899228,
+ "resurfacing_whole_network_million": 101.29096078899228,
+ "treatments": [
+  {
+   "name": "preventive",
+   "effect_class": "thin_overlay",
+   "cost_per_lane_km": 86.7148353614889,
+   "cost_per_lane_mile": 139.554,
+   "post_intercept": 0.6982348548919148,
+   "post_slope": 0.1808312957646068,
+   "rate_after": 0.024777792281183614,
+   "min_rqi": 85.0,
+   "source": "FHWA-HIF-10-020, Performance Evaluation of Various Rehabilitation and Preservation Treatments (January 2010), chapter 3, summary table 'HMA - thin overlay': 'Based on 13 projects, cost/lane mile ranges from $29,409 to $249,699' (2009 dollars)",
+   "url": "https://www.fhwa.dot.gov/pavement/preservation/pubs/perfeval/chap03.cfm",
+   "dollar_year": 2009
+  },
+  {
+   "name": "minor_rehab",
+   "effect_class": "medium_overlay",
+   "cost_per_lane_km": 206.29523582279487,
+   "cost_per_lane_mile": 332.0,
+   "post_intercept": 0.645864404219134,
+   "post_slope": 0.14559124960786418,
+   "rate_after": 0.02019363549810844,
+   "min_rqi": null,
+   "source": "FHWA, Status of the Nation's Highways, Bridges, and Transit: Conditions & Performance, 24th edition, Appendix A, Exhibit A-5, rural Interstate, flat terrain, 'Resurface Existing Lane'",
+   "url": "https://www.fhwa.dot.gov/policy/24cpr/pdf/AppendixA.pdf",
+   "dollar_year": 2016
+  },
+  {
+   "name": "major_rehab",
+   "effect_class": "thick_overlay",
+   "cost_per_lane_km": 720.7905829953073,
+   "cost_per_lane_mile": 1160.0,
+   "post_intercept": 0.7477083997969786,
+   "post_slope": 0.08381005470066731,
+   "rate_after": 0.0246645018647298,
+   "min_rqi": null,
+   "source": "same exhibit, 'Typical Reconstruction - Reconstruct Existing Lane'",
+   "url": "https://www.fhwa.dot.gov/policy/24cpr/pdf/AppendixA.pdf",
+   "dollar_year": 2016
+  }
+ ],
+ "rules": {
+  "worst_first": {
+   "trigger_iri": 1.5,
+   "major_iri": 2.5
+  },
+  "fixed_cycle_years": 8.0
+ },
+ "base": {
+  "annual_budget": 3038.728823669768,
+  "annual_budget_million": 3.0387288236697683,
+  "do_nothing": {
+   "mean_iri_by_year": [
+    1.146716113740713,
+    1.1701328384793899,
+    1.193549563218065,
+    1.2169662879567398,
+    1.2403830126954158
+   ],
+   "mean_iri_horizon": 1.1935495632180646,
+   "mean_iri_final": 1.2403830126954158,
+   "spend_by_year": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "total_spend": 0.0,
+   "treated_sections": 0,
+   "treatments": {
+    "preventive": 0,
+    "minor_rehab": 0,
+    "major_rehab": 0
+   },
+   "treatments_by_year": [
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    }
+   ],
+   "share_rqi_ge_90_final": 0.9389002036659878,
+   "share_iri_le_1p5_final": 0.7718940936863544,
+   "max_iri_final": 3.863083623693379,
+   "iri_years_saved": 0.0,
+   "total_spend_million": 0.0,
+   "spend_by_year_million": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "mip": {
+   "mean_iri_by_year": [
+    1.0929229845588677,
+    1.0911312794957144,
+    1.0937981986618674,
+    1.0993016053994678,
+    1.1063066624488977
+   ],
+   "mean_iri_horizon": 1.096692146112963,
+   "mean_iri_final": 1.1063066624488977,
+   "spend_by_year": [
+    3025.917392428219,
+    2981.4644973355603,
+    3014.330062435377,
+    3008.536397438956,
+    2960.4807921737056
+   ],
+   "total_spend": 14990.729141811818,
+   "treated_sections": 85,
+   "treatments": {
+    "preventive": 60,
+    "minor_rehab": 16,
+    "major_rehab": 9
+   },
+   "treatments_by_year": [
+    {
+     "preventive": 23,
+     "minor_rehab": 5,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 13,
+     "minor_rehab": 2,
+     "major_rehab": 2
+    },
+    {
+     "preventive": 11,
+     "minor_rehab": 3,
+     "major_rehab": 2
+    },
+    {
+     "preventive": 5,
+     "minor_rehab": 2,
+     "major_rehab": 3
+    },
+    {
+     "preventive": 8,
+     "minor_rehab": 4,
+     "major_rehab": 2
+    }
+   ],
+   "share_rqi_ge_90_final": 0.9755600814663951,
+   "share_iri_le_1p5_final": 0.8615071283095723,
+   "max_iri_final": 2.760083623693379,
+   "iri_years_saved": 237.78495899302465,
+   "total_spend_million": 14.99072914181182,
+   "spend_by_year_million": [
+    3.025917392428219,
+    2.98146449733556,
+    3.014330062435377,
+    3.0085363974389563,
+    2.9604807921737057
+   ],
+   "status": "Optimal",
+   "mip_gap": 0.005813374588956155,
+   "dual_bound": 239.16729203127073,
+   "binary_variables": 5065,
+   "constraints": 496
+  },
+  "worst_first": {
+   "mean_iri_by_year": [
+    1.1263363734365124,
+    1.133022780856052,
+    1.1410093584273917,
+    1.1504920327172465,
+    1.1523974605968101
+   ],
+   "mean_iri_horizon": 1.1406516012068026,
+   "mean_iri_final": 1.1523974605968101,
+   "spend_by_year": [
+    2883.1623319812293,
+    2883.1623319812293,
+    2883.1623319812293,
+    2883.1623319812293,
+    2987.5526922771014
+   ],
+   "total_spend": 14520.202020202018,
+   "treated_sections": 23,
+   "treatments": {
+    "preventive": 0,
+    "minor_rehab": 4,
+    "major_rehab": 19
+   },
+   "treatments_by_year": [
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 4
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 4
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 4
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 0,
+     "major_rehab": 4
+    },
+    {
+     "preventive": 0,
+     "minor_rehab": 4,
+     "major_rehab": 3
+    }
+   ],
+   "share_rqi_ge_90_final": 0.9857433808553971,
+   "share_iri_le_1p5_final": 0.8187372708757638,
+   "max_iri_final": 2.4510836236933793,
+   "iri_years_saved": 129.86449673764858,
+   "total_spend_million": 14.520202020202017,
+   "spend_by_year_million": [
+    2.883162331981229,
+    2.883162331981229,
+    2.883162331981229,
+    2.883162331981229,
+    2.9875526922771014
+   ]
+  },
+  "fixed_cycle": {
+   "mean_iri_by_year": [
+    1.123569546523595,
+    1.1353780630185857,
+    1.155202942577023,
+    1.1736171907047366,
+    1.1928007348965677
+   ],
+   "mean_iri_horizon": 1.1561136955441016,
+   "mean_iri_final": 1.1928007348965677,
+   "spend_by_year": [
+    3035.0192376521113,
+    3035.0192376521113,
+    3035.0192376521113,
+    1214.0076950608445,
+    1474.1522011453112
+   ],
+   "total_spend": 11793.217609162488,
+   "treated_sections": 136,
+   "treatments": {
+    "preventive": 136,
+    "minor_rehab": 0,
+    "major_rehab": 0
+   },
+   "treatments_by_year": [
+    {
+     "preventive": 35,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 35,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 35,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 14,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    },
+    {
+     "preventive": 17,
+     "minor_rehab": 0,
+     "major_rehab": 0
+    }
+   ],
+   "share_rqi_ge_90_final": 0.9470468431771895,
+   "share_iri_le_1p5_final": 0.8004073319755601,
+   "max_iri_final": 3.863083623693379,
+   "iri_years_saved": 91.90505513958003,
+   "total_spend_million": 11.793217609162488,
+   "spend_by_year_million": [
+    3.0350192376521115,
+    3.0350192376521115,
+    3.0350192376521115,
+    1.2140076950608445,
+    1.4741522011453112
+   ]
+  },
+  "mip_vs_worst_first": {
+   "benefit_ratio": 1.8310236051150783,
+   "extra_iri_years_saved": 107.92046225537607,
+   "mean_iri_final_diff": -0.04609079814791239,
+   "sections_in_both": 16
+  },
+  "mip_vs_fixed_cycle": {
+   "benefit_ratio": 2.5872892261681444,
+   "extra_iri_years_saved": 145.8799038534446,
+   "mean_iri_final_diff": -0.08649407244766993,
+   "sections_in_both": 41
+  },
+  "budget_share": 0.03
+ },
+ "sweep": [
+  {
+   "budget_share": 0.005,
+   "annual_budget": 506.4548039449614,
+   "mip": {
+    "iri_years_saved": 76.11684106938895,
+    "mean_iri_final": 1.1931971888065152,
+    "mean_iri_horizon": 1.1625447399718776,
+    "total_spend": 2266.4675793366737,
+    "treated_sections": 22,
+    "share_iri_le_1p5_final": 0.8167006109979633
+   },
+   "worst_first": {
+    "iri_years_saved": 39.65240799119141,
+    "mean_iri_final": 1.2146991499201956,
+    "mean_iri_horizon": 1.1773978695352982,
+    "total_spend": 2062.9523582279485,
+    "treated_sections": 10,
+    "share_iri_le_1p5_final": 0.7922606924643585
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 25.515200086110394,
+    "mean_iri_final": 1.2220816197455533,
+    "mean_iri_horizon": 1.1831564063601785,
+    "total_spend": 2167.8708840372224,
+    "treated_sections": 25,
+    "share_iri_le_1p5_final": 0.780040733197556
+   },
+   "benefit_ratio_vs_worst_first": 1.9196019844822019
+  },
+  {
+   "budget_share": 0.01,
+   "annual_budget": 1012.9096078899228,
+   "mip": {
+    "iri_years_saved": 126.2372407775521,
+    "mean_iri_final": 1.1668207657238612,
+    "mean_iri_horizon": 1.1421290985428907,
+    "total_spend": 4879.794500119303,
+    "treated_sections": 48,
+    "share_iri_le_1p5_final": 0.8329938900203666
+   },
+   "worst_first": {
+    "iri_years_saved": 59.4828545964151,
+    "mean_iri_final": 1.2010960186577035,
+    "mean_iri_horizon": 1.1693202945433538,
+    "total_spend": 4635.429094090511,
+    "treated_sections": 10,
+    "share_iri_le_1p5_final": 0.7922606924643585
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 52.75280946389616,
+    "mean_iri_final": 1.2071136140264351,
+    "mean_iri_horizon": 1.172061657122791,
+    "total_spend": 4769.31594488189,
+    "treated_sections": 55,
+    "share_iri_le_1p5_final": 0.7963340122199593
+   },
+   "benefit_ratio_vs_worst_first": 2.122245840991635
+  },
+  {
+   "budget_share": 0.02,
+   "annual_budget": 2025.8192157798455,
+   "mip": {
+    "iri_years_saved": 190.27430120264245,
+    "mean_iri_final": 1.132809903315032,
+    "mean_iri_horizon": 1.1160447562108782,
+    "total_spend": 10008.44070627535,
+    "treated_sections": 71,
+    "share_iri_le_1p5_final": 0.8513238289205702
+   },
+   "worst_first": {
+    "iri_years_saved": 110.12460897814118,
+    "mean_iri_final": 1.1688325147691545,
+    "mean_iri_horizon": 1.1486922886852171,
+    "total_spend": 9270.858188181022,
+    "treated_sections": 20,
+    "share_iri_le_1p5_final": 0.8126272912423625
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 80.11235375336697,
+    "mean_iri_final": 1.196609158386749,
+    "mean_iri_horizon": 1.1609172398969374,
+    "total_spend": 9972.206066571223,
+    "treated_sections": 115,
+    "share_iri_le_1p5_final": 0.8004073319755601
+   },
+   "benefit_ratio_vs_worst_first": 1.7278090970603157
+  },
+  {
+   "budget_share": 0.03,
+   "annual_budget": 3038.728823669768,
+   "mip": {
+    "iri_years_saved": 237.78495899302465,
+    "mean_iri_final": 1.1063066624488977,
+    "mean_iri_horizon": 1.096692146112963,
+    "total_spend": 14990.729141811818,
+    "treated_sections": 85,
+    "share_iri_le_1p5_final": 0.8615071283095723
+   },
+   "worst_first": {
+    "iri_years_saved": 129.86449673764858,
+    "mean_iri_final": 1.1523974605968101,
+    "mean_iri_horizon": 1.1406516012068026,
+    "total_spend": 14520.202020202018,
+    "treated_sections": 23,
+    "share_iri_le_1p5_final": 0.8187372708757638
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 91.90505513958003,
+    "mean_iri_final": 1.1928007348965677,
+    "mean_iri_horizon": 1.1561136955441016,
+    "total_spend": 11793.217609162488,
+    "treated_sections": 136,
+    "share_iri_le_1p5_final": 0.8004073319755601
+   },
+   "benefit_ratio_vs_worst_first": 1.8310236051150783
+  },
+  {
+   "budget_share": 0.05,
+   "annual_budget": 5064.548039449614,
+   "mip": {
+    "iri_years_saved": 313.65256514762353,
+    "mean_iri_final": 1.0643725520611798,
+    "mean_iri_horizon": 1.0657888442169958,
+    "total_spend": 25111.060158673343,
+    "treated_sections": 113,
+    "share_iri_le_1p5_final": 0.8839103869653768
+   },
+   "worst_first": {
+    "iri_years_saved": 212.14537107285562,
+    "mean_iri_final": 1.1050517982721986,
+    "mean_iri_horizon": 1.1071359701130319,
+    "total_spend": 25128.25101407778,
+    "treated_sections": 42,
+    "share_iri_le_1p5_final": 0.8574338085539714
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 95.3257177833755,
+    "mean_iri_final": 1.1931474890335316,
+    "mean_iri_horizon": 1.1547203502716799,
+    "total_spend": 11793.217609162484,
+    "treated_sections": 136,
+    "share_iri_le_1p5_final": 0.8004073319755601
+   },
+   "benefit_ratio_vs_worst_first": 1.478479419849835
+  },
+  {
+   "budget_share": 0.08,
+   "annual_budget": 8103.276863119382,
+   "mip": {
+    "iri_years_saved": 401.8363076605479,
+    "mean_iri_final": 1.0172358638758594,
+    "mean_iri_horizon": 1.029868786166925,
+    "total_spend": 40405.902032132326,
+    "treated_sections": 139,
+    "share_iri_le_1p5_final": 0.924643584521385
+   },
+   "worst_first": {
+    "iri_years_saved": 297.5436716154213,
+    "mean_iri_final": 1.0596746734145122,
+    "mean_iri_horizon": 1.0723505116435548,
+    "total_spend": 39956.653145629505,
+    "treated_sections": 64,
+    "share_iri_le_1p5_final": 0.9022403258655805
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 96.48962774531323,
+    "mean_iri_final": 1.1931921008118342,
+    "mean_iri_horizon": 1.1542462525275097,
+    "total_spend": 11793.217609162484,
+    "treated_sections": 136,
+    "share_iri_le_1p5_final": 0.8004073319755601
+   },
+   "benefit_ratio_vs_worst_first": 1.3505120289700734
+  },
+  {
+   "budget_share": 0.12,
+   "annual_budget": 12154.915294679073,
+   "mip": {
+    "iri_years_saved": 495.4443243936176,
+    "mean_iri_final": 0.9664401170600907,
+    "mean_iri_horizon": 0.9917392477827823,
+    "total_spend": 60617.30121092813,
+    "treated_sections": 181,
+    "share_iri_le_1p5_final": 0.9755600814663951
+   },
+   "worst_first": {
+    "iri_years_saved": 404.06836958456796,
+    "mean_iri_final": 0.9956701899309195,
+    "mean_iri_horizon": 1.0289595959738416,
+    "total_spend": 60556.350910681576,
+    "treated_sections": 104,
+    "share_iri_le_1p5_final": 0.9837067209775967
+   },
+   "fixed_cycle": {
+    "iri_years_saved": 96.48962774531323,
+    "mean_iri_final": 1.1931921008118342,
+    "mean_iri_horizon": 1.1542462525275097,
+    "total_spend": 11793.217609162484,
+    "treated_sections": 136,
+    "share_iri_le_1p5_final": 0.8004073319755601
+   },
+   "benefit_ratio_vs_worst_first": 1.2261398359465636
+  }
+ ],
+ "worst_first_budget_share_to_match_mip_base": 0.05900706024262953,
+ "worst_first_budget_multiple_to_match_mip_base": 1.966902008087651,
+ "preventive_cost_sensitivity": [
+  {
+   "case": "low",
+   "cost_per_lane_mile": 29.409,
+   "mip_iri_years_saved": 298.41564919472387,
+   "worst_first_iri_years_saved": 129.86449673764858,
+   "benefit_ratio": 2.2979001704952604,
+   "mip_treatments": {
+    "preventive": 125,
+    "minor_rehab": 17,
+    "major_rehab": 13
+   }
+  },
+  {
+   "case": "high",
+   "cost_per_lane_mile": 249.699,
+   "mip_iri_years_saved": 203.32862095253472,
+   "worst_first_iri_years_saved": 129.86449673764858,
+   "benefit_ratio": 1.5656982936860557,
+   "mip_treatments": {
+    "preventive": 39,
+    "minor_rehab": 15,
+    "major_rehab": 8
+   }
+  }
+ ],
+ "rate_model_sensitivity": {
+  "other_rate_model": "gbm",
+  "rate_median": 0.026415312991346453,
+  "rate_p90": 0.05940680983964057,
+  "benefit_ratio_vs_worst_first": 1.8855693873856794,
+  "mip_treatments": {
+   "preventive": 57,
+   "minor_rehab": 14,
+   "major_rehab": 10
+  },
+  "sections_treated_in_both_plans": 78,
+  "sections_treated_in_either_plan": 88,
+  "plan_overlap": 0.8863636363636364
+ }
+}

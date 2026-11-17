@@ -1,4 +1,19 @@
 {
+ "standards": {
+  "assessment": "JTG 5210-2018",
+  "preventive": "JTG/T 5142-01-2021"
+ },
+ "clauses": {
+  "rqi": "7.4.7",
+  "rdi": "7.4.8",
+  "pci": "7.4.5",
+  "grades": "4.0.2"
+ },
+ "formulas": {
+  "rqi": "RQI = 100 / (1 + a0 · exp(a1 · IRI))",
+  "pci": "PCI = 100 − a0 · DR^a1",
+  "rdi": "RDI = 100 − a0 · RD up to RDa, then 90 − a1 · (RD − RDa) up to RDb, 0 above"
+ },
  "rqi_coefficients": {
   "expressway_class1": {
    "a0": 0.026,

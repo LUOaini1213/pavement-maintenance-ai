@@ -43,7 +43,7 @@ def clean(obj):
 def data_summary(data: dict) -> dict:
     manifest = json.loads((REPO / "data" / "raw_manifest.json").read_text(encoding="utf-8"))
     out = {
-        "dataset": manifest["dataset"], "citation": manifest["citation"], "landing_page": manifest["landing_page"],
+        "dataset": manifest["dataset"], "release": "SDR 40", "citation": manifest["citation"], "landing_page": manifest["landing_page"],
         "raw_files": len(manifest["files"]), "raw_bytes": int(sum(f["bytes"] for f in manifest["files"])),
         "retrieved": sorted({f["retrieved_utc"][:10] for f in manifest["files"]})[0],
         "sections": int(len(data["sections"])), "sites": int(data["sections"]["site_id"].nunique()),
@@ -106,6 +106,10 @@ def china_view(data: dict) -> dict:
     limits = {str(int(lim)): china.iri_for_rqi(lim) for lim, _ in china.GRADE_LIMITS}
     limits["85"] = china.iri_for_rqi(85.0)
     return clean({
+        "standards": {"assessment": "JTG 5210-2018", "preventive": "JTG/T 5142-01-2021"},
+        "clauses": {"rqi": "7.4.7", "rdi": "7.4.8", "pci": "7.4.5", "grades": "4.0.2"},
+        "formulas": {"rqi": "RQI = 100 / (1 + a0 · exp(a1 · IRI))", "pci": "PCI = 100 − a0 · DR^a1",
+                     "rdi": "RDI = 100 − a0 · RD up to RDa, then 90 − a1 · (RD − RDa) up to RDb, 0 above"},
         "rqi_coefficients": china.RQI_COEFFICIENTS,
         "rdi_parameters": {"a0": china.RDI_A0, "a1": china.RDI_A1, "rda_mm": china.RDI_RDA, "rdb_mm": china.RDI_RDB},
         "grade_limits": {name: lim for lim, name in china.GRADE_LIMITS},
@@ -318,6 +322,9 @@ def optimisation(data: dict, pairs: pd.DataFrame, det: dict, effects: dict) -> d
     base_budgets = [o["base_budget_share"] * resurfacing_all] * o["horizon_years"]
     base_plan = solve_mip(sections, treatments, base_budgets, mip_rel_gap=o["mip_rel_gap"])["plan"]
     alt_plan = solve_mip(alt_sections, treatments, base_budgets, mip_rel_gap=o["mip_rel_gap"])["plan"]
+    out["base_mip_plan"] = sorted([sections[i].sid, t, treatments[k].name] for i, (t, k) in base_plan.items())
+    out["network_sections"] = [{"sid": s.sid, "iri": s.iri0, "rate": s.rate, "age": s.age,
+                                "eligible": sorted(s.eligible)} for s in sections]
     ids = lambda secs, plan: {secs[i].sid for i in plan}          # noqa: E731
     a, b = ids(sections, base_plan), ids(alt_sections, alt_plan)
     out["rate_model_sensitivity"] = {

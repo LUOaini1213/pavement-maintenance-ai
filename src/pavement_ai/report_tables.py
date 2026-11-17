@@ -217,6 +217,27 @@ def yearly_plan_table(res: dict) -> str:
     return _table(header, rows)
 
 
+def rate_note(res: dict) -> str:
+    """Brief: which do-nothing growth rate the plan uses and why (bilingual)."""
+    net = res["optimisation"]["network"]
+    b = res["deterioration"]["iri"]["grouped_forward"]["all"]
+    gbm, base = fmt(b["methods"]["gbm"]["mae"], ".3f"), fmt(b["methods"][b["best_baseline"]]["mae"], ".3f")
+    pairs = fmt(res["deterioration"]["iri"]["pairs"], ",d")
+    if net["rate_model"] == "gbm":
+        zh = (f"- 采用的衰变速率：梯度提升模型按路段给出，中位数每年 {fmt(net['rate_median'], '.3f')} m/km。原因：按站点分组、"
+              f"时间在后的检验中，其 IRI 误差 {gbm} m/km，优于最优朴素基线的 {base} m/km。")
+        en = (f"  Growth rate used: section-specific, from the boosting model, median {fmt(net['rate_median'], '.3f')} m/km "
+              f"per year. Reason: under site-grouped, forward-in-time validation its IRI error is {gbm} m/km, better "
+              f"than the best naive baseline's {base} m/km.")
+    else:
+        zh = (f"- 采用的衰变速率：全路网统一每年 {fmt(net['rate_median'], '.3f')} m/km（{pairs} 组历史观测对的中位数）。原因：按站点分组、"
+              f"时间在后的检验中，梯度提升模型的 IRI 误差为 {gbm} m/km，最优朴素基线为 {base} m/km，前者没有胜出。")
+        en = (f"  Growth rate used: {fmt(net['rate_median'], '.3f')} m/km per year for every section (median of {pairs} "
+              f"historical pairs). Reason: under site-grouped, forward-in-time validation the boosting model's IRI error "
+              f"is {gbm} m/km against {base} m/km for the best naive baseline; it did not win.")
+    return zh + "\n" + en
+
+
 TABLES = {
     "forecast_forward": forecast_table("grouped_forward"),
     "forecast_grouped": forecast_table("grouped"),
@@ -233,4 +254,5 @@ TABLES = {
     "grades": grade_table,
     "inputs": inputs_table,
     "yearly_plan": yearly_plan_table,
+    "rate_note": rate_note,
 }

@@ -342,3 +342,18 @@ def test_treatment_summary_hand_values():
     assert res["pre_rate_median"] == pytest.approx(0.10) and res["post_rate_median"] == pytest.approx(0.04)
     assert res["n_post_rate"] == 7 and res["post_rate_median_all"] == pytest.approx(0.04)
     assert "seal" not in T.summarise(ev)                    # classes with fewer than five events are left out
+
+
+def test_latest_states_take_the_surface_in_place_at_the_last_visit(toy):
+    rows = D.latest_states(D.series(toy, "iri"), "iri", 5.0).set_index("section_id")
+    a = rows.loc["01-0001"]
+    # only the three visits after the overlay count: 0.80, 0.85, 0.90 -> +0.05 a year -> 1.15 five years on
+    assert (a["t0"], a["t1"], a["h"], a["y0"], a["n_hist"]) == (1996.0, 2001.0, 5.0, 0.90, 3)
+    assert a["hist_slope"] == pytest.approx(0.05) and a["pred_linear"] == pytest.approx(1.15)
+    assert a["age0"] == pytest.approx(1996.0 - (1993 + JUL2)) and a["seg_event"] == "thick_overlay"
+    assert np.isnan(a["y1"])
+    b = rows.loc["01-0002"]
+    assert b["y0"] == 2.1 and b["pred_linear"] == pytest.approx(2.6) and b["seg_event"] == "seal"
+    ds = D.build_dataset(toy, "iri", latest_horizon=5.0).set_index("section_id")
+    assert ds.loc["01-0001", "rut_0"] == 2.0 and ds.loc["01-0001", "crack_0"] == 0.0     # surveys of June 1995 / 1994
+    assert ds.loc["01-0001", "kesal"] == pytest.approx(250.0)

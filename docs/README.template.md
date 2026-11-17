@@ -10,9 +10,9 @@ those files and a test checks that.
 **What it found, in short**
 
 {{table:verdict_sentences}}
-- Splitting the same IRI pairs at random instead of by site makes boosting look
-  {{deterioration:iri.leaky_random_pairs.all.gbm_mae_change_pct|+.1f}} % against the best baseline; with sites
-  kept apart and the test period after the training period the figure is
+- Splitting the same IRI pairs at random instead of by site puts boosting's MAE
+  {{deterioration:iri.leaky_random_pairs.all.gbm_mae_change_pct|+.1f}} % from the best baseline's (negative means
+  lower error); with sites kept apart and the test period after the training period the figure is
   {{deterioration:iri.grouped_forward.all.gbm_mae_change_pct|+.1f}} %. The first number is a leak, not skill.
 - Recorded treatments: a thin overlay lowered IRI by
   {{treatment_effects:iri.classes.thin_overlay.drop_mean|.2f}} m/km on average, a thick one by
@@ -31,7 +31,7 @@ those files and a test checks that.
 - 数据：美国联邦公路局 LTPP 长期路面性能数据库（{{data:release}}），沥青面层路段
   {{data:sections|,d}} 个；IRI 检测 {{data:indicators.iri.visits|,d}} 次、车辙 {{data:indicators.rut.visits|,d}}
   次、裂缝调查 {{data:indicators.crack.visits|,d}} 次（{{data:indicators.iri.first_year|d}}–{{data:indicators.iri.last_year|d}} 年）。
-  原始数据不入库，只保留获取脚本与 SHA-256；仓库内为小体量派生表。
+  原始数据不入库，只保留获取脚本与文件哈希；仓库内为小体量派生表。
 - 性能预测（按站点分组留出，并且训练期在前、测试期在后）：对比末次值、本路段线性/指数外推、
   路网中位速率、马尔可夫链与梯度提升。结论如实记录：
 {{table:verdict_sentences_zh}}
@@ -40,7 +40,7 @@ those files and a test checks that.
   {{treatment_effects:iri.classes.thick_overlay.drop_mean|.2f}} m/km，封层类
   {{treatment_effects:iri.classes.seal.drop_mean|.2f}} m/km（对平整度基本无改善）。
 - 养护决策：{{optimisation:network.sections|d}} 个路段、{{optimisation:horizon_years|d}} 年、年度预算约束下的混合整数规划
-  （HiGHS 求解，{{optimisation:base.mip.binary_variables|,d}} 个 0-1 变量）。同等预算下节省的「IRI·年」为
+  （HiGHS 求解，{{optimisation:base.mip.binary_variables|,d}} 个二元变量）。同等预算下节省的「IRI·年」为
   {{optimisation:base.mip.iri_years_saved|.1f}}，「最差优先」规则为
   {{optimisation:base.worst_first.iri_years_saved|.1f}}，前者是后者的
   {{optimisation:base.mip_vs_worst_first.benefit_ratio|.2f}} 倍。
@@ -86,7 +86,9 @@ predicts the later value from what was known at the origin.
   annual rate; a Markov chain on condition states with a one-year step.
 - Machine learning: gradient boosting on the increment, with age, time since the last renewal and its type,
   layer thicknesses, truck traffic and ESAL up to the origin year, climate normals, the own trend so far and the
-  latest values of the other two indicators.
+  latest values of the other two indicators. Two variants are reported: the squared-error one was run first,
+  the absolute-error one was added because the methods are ranked by MAE and is the one the verdicts use.
+  Hyper-parameters were fixed beforehand and not tuned on the test folds.
 - Validation: {{deterioration:settings.folds|d}} folds of whole sites (a site is a state plus project, so
   co-located sections never sit on both sides). In the stricter scheme the training pairs must also end before
   {{deterioration:settings.cutoff_year|.0f}} and the test pairs start in or after it. Intervals are
@@ -150,7 +152,9 @@ Do-nothing growth: {{optimisation:network.rate_median|.3f}} m/km per year for ev
 The MIP has one binary variable per allowed (section, year, treatment), at most one treatment per section in
 the horizon and one budget row per year; the objective is the IRI-years saved against doing nothing. It is
 solved with HiGHS ({{optimisation:base.mip.binary_variables|,d}} binaries,
-{{optimisation:base.mip.constraints|,d}} rows, status {{optimisation:base.mip.status}}).
+{{optimisation:base.mip.constraints|,d}} rows, status {{optimisation:base.mip.status}}, stopped once the plan was
+proven within {{inputs:optimisation.mip_rel_gap|pct1}} % of the best bound; the base case ended
+{{optimisation:base.mip.mip_gap|pct2}} % from it).
 The worst-first rule ranks sections by current IRI and resurfaces those at or above
 {{inputs:optimisation.worst_first.trigger_iri|.1f}} m/km (thick overlay at or above
 {{inputs:optimisation.worst_first.major_iri|.1f}} m/km or where resurfacing is not allowed) until the year's money
@@ -169,6 +173,10 @@ Budget sensitivity:
 
 ![Budget trade-off](results/figures/budget_tradeoff.png)
 
+To save as many IRI-years as the MIP does at the base budget, the worst-first rule needs about
+{{optimisation:worst_first_budget_multiple_to_match_mip_base|.1f}} times the money (interpolated on the table
+above).
+
 Other checks: with the thin overlay priced at the low and at the high end of the published range the MIP saves
 {{optimisation:preventive_cost_sensitivity.0.benefit_ratio|.2f}} and
 {{optimisation:preventive_cost_sensitivity.1.benefit_ratio|.2f}} times as many IRI-years as worst-first. With
@@ -182,15 +190,15 @@ treated under both.
 {{china:sources.jtg_5210_2018.title}} ({{china:sources.jtg_5210_2018.issuer}}; {{china:sources.jtg_5210_2018.url}},
 retrieved {{china:sources.jtg_5210_2018.retrieved}}):
 
-- Clause {{china:clauses.rqi}}: RQI = {{china:hundred|.0f}} / ({{china:one|.0f}} + a0 · exp(a1 · IRI)), with a0 =
+- Clause {{china:clauses.rqi}}: {{china:formulas.rqi}}, with a0 =
   {{china:rqi_coefficients.expressway_class1.a0|.3f}} and a1 = {{china:rqi_coefficients.expressway_class1.a1|.2f}}
   for motorways and class-one highways (a0 = {{china:rqi_coefficients.other.a0|.4f}}, a1 =
   {{china:rqi_coefficients.other.a1|.2f}} for the other classes).
-- Clause {{china:clauses.rdi}}: RDI falls by {{china:rdi_parameters.a0|.1f}} per mm of rut up to
-  {{china:rdi_parameters.rda_mm|.0f}} mm, then by {{china:rdi_parameters.a1|.1f}} per mm, and is zero above
-  {{china:rdi_parameters.rdb_mm|.0f}} mm.
-- Clause {{china:clauses.pci}}: PCI = {{china:hundred|.0f}} − {{china:pci_parameters_asphalt.a0|.2f}} ·
-  DR^{{china:pci_parameters_asphalt.a1|.3f}} for asphalt, DR being the distress ratio in %.
+- Clause {{china:clauses.rdi}}: {{china:formulas.rdi}}, with a0 = {{china:rdi_parameters.a0|.1f}}, a1 =
+  {{china:rdi_parameters.a1|.1f}}, RDa = {{china:rdi_parameters.rda_mm|.0f}} mm and RDb =
+  {{china:rdi_parameters.rdb_mm|.0f}} mm (RD is the rut depth).
+- Clause {{china:clauses.pci}}: {{china:formulas.pci}}, with a0 = {{china:pci_parameters_asphalt.a0|.2f}} and a1 =
+  {{china:pci_parameters_asphalt.a1|.3f}} for asphalt, DR being the distress ratio in %.
 - Table {{china:clauses.grades}}: excellent from {{china:grade_limits.excellent|.0f}}, good from
   {{china:grade_limits.good|.0f}}, average from {{china:grade_limits.average|.0f}}, poor from
   {{china:grade_limits.poor|.0f}}, failed below.

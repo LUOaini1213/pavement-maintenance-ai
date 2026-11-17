@@ -86,6 +86,7 @@
    "basis": "none"
   }
  ],
+ "python": "3.11",
  "costs": {
   "preventive": {
    "label": "thin asphalt overlay (40 mm or less)",
@@ -115,6 +116,7 @@
  },
  "optimisation": {
   "horizon_years": 5,
+  "mip_rel_gap": 0.005,
   "network_min_last_visit_year": 2010,
   "section_length_lane_km": 1.0,
   "budget_shares": [
@@ -137,5 +139,9 @@
    "major_iri": 2.5
   },
   "fixed_cycle_years": 8.0
+ },
+ "event_classes": {
+  "thin_overlay_max_mm": 40.0,
+  "thick_overlay_min_mm": 75.0
  }
 }

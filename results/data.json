@@ -1,5 +1,6 @@
 {
  "dataset": "FHWA LTPP InfoPave Standard Data Release 40 (September 2026)",
+ "release": "SDR 40",
  "citation": "Long Term Pavement Performance InfoPave, Standard Data Release, SDR 40, https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
  "landing_page": "https://infopave.fhwa.dot.gov/Data/StandardDataRelease",
  "raw_files": 8,
