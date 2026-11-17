@@ -33,12 +33,13 @@ those files and a test checks that.
 - 数据：美国联邦公路局 LTPP 长期路面性能数据库（SDR 40），沥青面层路段
   1,823 个；IRI 检测 19,949 次、车辙 18,143
   次、裂缝调查 13,127 次（1989–2025 年）。
-  原始数据不入库，只保留获取脚本与文件哈希；仓库内为小体量派生表。
+  原始数据不入库，只保留获取脚本与文件哈希；仓库内为小体量派生表。使用条款（FHWA 声明其网站信息可复制、分发；
+  data.gov 将该数据集标注为美国政府作品）及引用格式见 `docs/sources.md`。
 - 性能预测（按站点分组留出，并且训练期在前、测试期在后）：对比末次值、本路段线性/指数外推、
   路网中位速率、马尔可夫链与梯度提升。结论如实记录：
-- IRI（m/km）：梯度提升 MAE 0.110，与之无法区分：最优朴素基线「末次值＋路网中位衰变速率」（MAE 0.106），差值 +0.004（区间 -0.001 至 +0.009）。
-- 车辙深度（mm）：梯度提升 MAE 1.11，不如最优朴素基线「末次观测值」（MAE 0.94），差值 +0.16（区间 +0.09 至 +0.24）。
-- 裂缝率（%）：梯度提升 MAE 4.88，优于最优朴素基线「末次观测值」（MAE 5.63），差值 -0.75（区间 -1.03 至 -0.45）。
+  - IRI（m/km）：梯度提升 MAE 0.110，与最优朴素基线「末次值＋路网中位衰变速率」（MAE 0.106）无显著差异；差值 +0.004（区间 -0.001 至 +0.009）。
+  - 车辙深度（mm）：梯度提升 MAE 1.11，不如最优朴素基线「末次观测值」（MAE 0.94）；差值 +0.16（区间 +0.09 至 +0.24）。
+  - 裂缝率（%）：梯度提升 MAE 4.88，优于最优朴素基线「末次观测值」（MAE 5.63）；差值 -0.75（区间 -1.03 至 -0.45）。
 - 养护效果（养护前后实测对比，存在选择偏差）：薄层罩面平均降低 IRI
   0.45 m/km，厚罩面
   1.01 m/km，封层类
@@ -52,7 +53,7 @@ those files and a test checks that.
   7.4.8 把车辙换算为 RDI，并按表 4.0.2 分级；薄层罩面适用条件取自
   JTG/T 5142-01-2021 表 5.3.2。系数与条款均核对自交通运输部官网文本，
   出处见 `docs/sources.md`。
-- 工程化：134 个离线测试；变异测试首轮 58/62，
+- 工程化：135 个离线测试；变异测试首轮 58/62，
   补测试后 61/62（余下 1 个为等价变异，原因见结果文件）。
 
 ## Data
@@ -367,7 +368,7 @@ Rebuilding the extracts from the source needs `requirements-data.txt` and networ
 
 ## Tests
 
-134 offline tests (`pytest`), most of them hand-calculated cases; the workflow in
+135 offline tests (`pytest`), most of them hand-calculated cases; the workflow in
 `.github/workflows/ci.yml` runs them with the pinned requirements and regenerates this file to compare.
 Mutation testing (`mutation/run_mutants.py`): a control mutant that must be caught runs first; then
 62 deliberate bugs were injected one at a time. First run: 58

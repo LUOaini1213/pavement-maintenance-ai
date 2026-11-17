@@ -31,7 +31,8 @@ those files and a test checks that.
 - 数据：美国联邦公路局 LTPP 长期路面性能数据库（{{data:release}}），沥青面层路段
   {{data:sections|,d}} 个；IRI 检测 {{data:indicators.iri.visits|,d}} 次、车辙 {{data:indicators.rut.visits|,d}}
   次、裂缝调查 {{data:indicators.crack.visits|,d}} 次（{{data:indicators.iri.first_year|d}}–{{data:indicators.iri.last_year|d}} 年）。
-  原始数据不入库，只保留获取脚本与文件哈希；仓库内为小体量派生表。
+  原始数据不入库，只保留获取脚本与文件哈希；仓库内为小体量派生表。使用条款（FHWA 声明其网站信息可复制、分发；
+  data.gov 将该数据集标注为美国政府作品）及引用格式见 `docs/sources.md`。
 - 性能预测（按站点分组留出，并且训练期在前、测试期在后）：对比末次值、本路段线性/指数外推、
   路网中位速率、马尔可夫链与梯度提升。结论如实记录：
 {{table:verdict_sentences_zh}}

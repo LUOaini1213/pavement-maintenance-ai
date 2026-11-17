@@ -107,9 +107,9 @@ def test_mip_matches_brute_force_on_small_networks(seed):
     trs = [Treatment("p", 3.0, 0.2, 0.7, 0.03, min_rqi=85.0), Treatment("m", 7.0, 0.9, 0.1, 0.05),
            Treatment("M", 15.0, 0.7, 0.0, 0.04)]
     budgets = [9.0, 6.0]
-    res = solve_mip(secs, trs, budgets)
+    res = solve_mip(secs, trs, budgets, mip_rel_gap=0.0)
     assert res["objective"] == pytest.approx(brute_force(secs, trs, budgets), abs=1e-6)
-    assert res["mip_gap"] <= 1e-6
+    assert res["mip_gap"] <= 1e-9 and res["status"] == "Optimal"
 
 
 def test_worst_first_order_and_skip_when_unaffordable():

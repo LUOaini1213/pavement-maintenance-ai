@@ -19,6 +19,22 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
 
 
+def assert_same(fresh, stored, where="results"):
+    """Equal structure and text, numbers equal to nine significant digits (maths libraries differ in the last bit)."""
+    if isinstance(stored, dict):
+        assert isinstance(fresh, dict) and set(fresh) == set(stored), where
+        for k in stored:
+            assert_same(fresh[k], stored[k], f"{where}.{k}")
+    elif isinstance(stored, list):
+        assert isinstance(fresh, list) and len(fresh) == len(stored), where
+        for i, (a, b) in enumerate(zip(fresh, stored)):
+            assert_same(a, b, f"{where}.{i}")
+    elif isinstance(stored, float):
+        assert fresh == pytest.approx(stored, rel=1e-9, abs=1e-12), where
+    else:
+        assert fresh == stored, where
+
+
 @pytest.fixture(scope="module")
 def results():
     return report.load_results()
@@ -67,17 +83,17 @@ def test_real_pairs_stay_inside_one_surface(data, iri_pairs):
 
 # ---- results are what the code computes ------------------------------------------------------------------------
 def test_data_summary_is_current(results, data):
-    assert json.loads(json.dumps(pipeline.clean(pipeline.data_summary(data)))) == results["data"]
+    assert_same(json.loads(json.dumps(pipeline.clean(pipeline.data_summary(data)))), results["data"])
 
 
 def test_inputs_record_is_current(results):
     import run_all
-    assert json.loads(json.dumps(run_all.inputs_record())) == results["inputs"]
+    assert_same(json.loads(json.dumps(run_all.inputs_record())), results["inputs"])
     assert results["inputs"]["optimisation"]["mip_rel_gap"] == config.OPTIMISATION["mip_rel_gap"]
 
 
 def test_china_view_is_current(results, data):
-    assert json.loads(json.dumps(pipeline.china_view(data))) == results["china"]
+    assert_same(json.loads(json.dumps(pipeline.china_view(data))), results["china"])
     assert results["china"]["iri_at_rqi_expressway"]["90"] == pytest.approx(2.234515, abs=1e-5)
     assert results["china"]["rut_mm_at_rdi_80"] == pytest.approx(13.3333, abs=1e-3)
     assert china.rdi(results["china"]["rut_mm_at_rdi_80"]) == pytest.approx(80.0)
@@ -246,6 +262,14 @@ def test_worst_first_rule_picks_by_roughness_band():
     assert plans["worst_first"] == {0: (1, 2), 3: (1, 2), 1: (1, 1)}       # thick, thick (resurfacing not allowed), resurface
     old = [Section("old", 1.0, 0.0, age=9.0), Section("young", 1.0, 0.0, age=2.0)]
     assert pipeline.rule_plans(old, trs, [1e9])["fixed_cycle"] == {0: (1, 0)}
+
+
+def test_assert_same_notices_differences():
+    assert_same({"a": [1.0, "x"], "b": 2}, {"a": [1.0 + 1e-13, "x"], "b": 2})
+    for other in ({"a": [1.001, "x"], "b": 2}, {"a": [1.0, "y"], "b": 2}, {"a": [1.0, "x"], "b": 3}, {"a": [1.0, "x"]},
+                  {"a": [1.0], "b": 2}):
+        with pytest.raises(AssertionError):
+            assert_same(other, {"a": [1.0, "x"], "b": 2})
 
 
 def test_clean_makes_strict_json():

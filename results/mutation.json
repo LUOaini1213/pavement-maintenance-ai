@@ -1,5 +1,5 @@
 {
- "tests": 134,
+ "tests": 135,
  "control": {
   "desc": "control: RQI always zero",
   "killed": true,
@@ -523,7 +523,7 @@
   ]
  },
  "final": {
-  "tests": 134,
+  "tests": 135,
   "total": 62,
   "killed": 61,
   "survived": 1,
@@ -541,7 +541,7 @@
     "desc": "expressway RQI uses the a0 of the lower classes",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
-    "seconds": 6.3
+    "seconds": 6.9
    },
    {
     "id": "M02",
@@ -549,7 +549,7 @@
     "desc": "RQI: IRI outside the exponential",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
-    "seconds": 6.4
+    "seconds": 6.9
    },
    {
     "id": "M03",
@@ -557,7 +557,7 @@
     "desc": "inverse RQI multiplies by a0",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_iri_for_rqi_is_the_inverse",
-    "seconds": 6.3
+    "seconds": 7.8
    },
    {
     "id": "M04",
@@ -565,7 +565,7 @@
     "desc": "RDI second branch not measured from RDa",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_rdi_piecewise[15.0-75.0]",
-    "seconds": 6.3
+    "seconds": 6.7
    },
    {
     "id": "M05",
@@ -573,7 +573,7 @@
     "desc": "RDI at exactly RDb",
     "killed": false,
     "first_failure": null,
-    "seconds": 34.6
+    "seconds": 33.8
    },
    {
     "id": "M06",
@@ -581,7 +581,7 @@
     "desc": "PCI uses the cement-concrete coefficients",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_pci_hand_values",
-    "seconds": 6.4
+    "seconds": 8.6
    },
    {
     "id": "M07",
@@ -589,7 +589,7 @@
     "desc": "grade limits exclusive instead of inclusive",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_grade_limits[90.0-excellent]",
-    "seconds": 6.5
+    "seconds": 7.1
    },
    {
     "id": "M08",
@@ -597,7 +597,7 @@
     "desc": "thin-overlay window takes the ultra-thin values",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_preventive_windows_are_the_published_ones",
-    "seconds": 6.3
+    "seconds": 9.1
    },
    {
     "id": "M09",
@@ -605,7 +605,7 @@
     "desc": "a 40 mm overlay no longer counts as thin",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_classify_event[19-40.0-2-thin_overlay]",
-    "seconds": 7.1
+    "seconds": 8.5
    },
    {
     "id": "M10",
@@ -613,7 +613,7 @@
     "desc": "a 75 mm overlay counted as medium",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_classify_event[55-75.0-2-thick_overlay]",
-    "seconds": 7.0
+    "seconds": 8.0
    },
    {
     "id": "M11",
@@ -621,7 +621,7 @@
     "desc": "slurry seal (33) dropped from the seal codes",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_classify_event[33-None-2-seal]",
-    "seconds": 7.4
+    "seconds": 8.0
    },
    {
     "id": "M12",
@@ -629,7 +629,7 @@
     "desc": "routine work (crack sealing) starts a new segment",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_resetting_set",
-    "seconds": 8.6
+    "seconds": 7.8
    },
    {
     "id": "M13",
@@ -637,7 +637,7 @@
     "desc": "a seal recorded with an overlay outranks the overlay",
     "killed": true,
     "first_failure": "tests/test_china_events.py::test_classify_event[31,51-61.0-6-medium_overlay]",
-    "seconds": 9.1
+    "seconds": 7.9
    },
    {
     "id": "M14",
@@ -645,7 +645,7 @@
     "desc": "decimal year from the month number",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_decimal_year",
-    "seconds": 8.8
+    "seconds": 7.9
    },
    {
     "id": "M15",
@@ -653,7 +653,7 @@
     "desc": "OLS slope divided by n instead of Sxx",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_ols_line_hand_values",
-    "seconds": 7.2
+    "seconds": 8.0
    },
    {
     "id": "M16",
@@ -661,7 +661,7 @@
     "desc": "trend baseline fitted on the whole segment (look-ahead leak)",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_three_point_trend_hand_values",
-    "seconds": 6.9
+    "seconds": 8.4
    },
    {
     "id": "M17",
@@ -669,7 +669,7 @@
     "desc": "maximum horizon not enforced",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_horizon_limits_and_clipping",
-    "seconds": 6.8
+    "seconds": 8.3
    },
    {
     "id": "M18",
@@ -677,7 +677,7 @@
     "desc": "pairs run across a treatment",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_pairs_never_cross_a_treatment_and_trends_use_history_only",
-    "seconds": 8.0
+    "seconds": 9.4
    },
    {
     "id": "M19",
@@ -685,7 +685,7 @@
     "desc": "other indicators attached from the nearest visit, also future ones",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
-    "seconds": 8.1
+    "seconds": 9.1
    },
    {
     "id": "M20",
@@ -693,7 +693,7 @@
     "desc": "traffic taken from years after the origin",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
-    "seconds": 8.1
+    "seconds": 9.8
    },
    {
     "id": "M21",
@@ -701,7 +701,7 @@
     "desc": "monitoring start used as construction date",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_segments_split_only_at_surface_renewals",
-    "seconds": 8.7
+    "seconds": 9.7
    },
    {
     "id": "M22",
@@ -709,7 +709,7 @@
     "desc": "global rate is the mean rate",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
-    "seconds": 8.7
+    "seconds": 10.4
    },
    {
     "id": "M23",
@@ -717,7 +717,7 @@
     "desc": "global rate ignores the horizon",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
-    "seconds": 8.7
+    "seconds": 10.0
    },
    {
     "id": "M24",
@@ -725,7 +725,7 @@
     "desc": "Markov state boundaries shifted",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
-    "seconds": 8.8
+    "seconds": 9.2
    },
    {
     "id": "M25",
@@ -733,7 +733,7 @@
     "desc": "Markov steps rounded down",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
-    "seconds": 6.9
+    "seconds": 9.9
    },
    {
     "id": "M26",
@@ -741,7 +741,7 @@
     "desc": "Markov transition matrix transposed",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
-    "seconds": 6.6
+    "seconds": 9.6
    },
    {
     "id": "M27",
@@ -749,7 +749,7 @@
     "desc": "boosting returns the increment only",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_boosting_learns_a_traffic_driven_rate_that_a_global_rate_cannot",
-    "seconds": 7.1
+    "seconds": 10.0
    },
    {
     "id": "M28",
@@ -757,7 +757,7 @@
     "desc": "overlay-on-concrete flag always on",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_feature_frame_encodes_event_and_family",
-    "seconds": 6.6
+    "seconds": 9.5
    },
    {
     "id": "M29",
@@ -765,7 +765,7 @@
     "desc": "training pairs may end after the time cut",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
-    "seconds": 7.7
+    "seconds": 12.2
    },
    {
     "id": "M30",
@@ -773,7 +773,7 @@
     "desc": "test pairs may start before the time cut",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
-    "seconds": 6.9
+    "seconds": 12.8
    },
    {
     "id": "M31",
@@ -781,7 +781,7 @@
     "desc": "test sites also used for training (leak)",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_fold_assignment_is_stable_and_site_disjoint",
-    "seconds": 6.8
+    "seconds": 11.9
    },
    {
     "id": "M32",
@@ -789,7 +789,7 @@
     "desc": "RMSE without the square root",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_error_metrics_hand_values",
-    "seconds": 6.8
+    "seconds": 12.2
    },
    {
     "id": "M33",
@@ -797,7 +797,7 @@
     "desc": "bootstrap does not resample (zero-width intervals)",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_cluster_bootstrap_interval_reflects_between_site_spread",
-    "seconds": 6.5
+    "seconds": 12.8
    },
    {
     "id": "M34",
@@ -805,7 +805,7 @@
     "desc": "sign of boosting-minus-baseline flipped",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
-    "seconds": 6.5
+    "seconds": 9.9
    },
    {
     "id": "M35",
@@ -813,7 +813,7 @@
     "desc": "boosting compared with the worst baseline",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
-    "seconds": 6.4
+    "seconds": 9.5
    },
    {
     "id": "M36",
@@ -821,7 +821,7 @@
     "desc": "'beats' declared without looking at the interval",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_beats_needs_the_whole_interval_below_zero",
-    "seconds": 6.6
+    "seconds": 10.2
    },
    {
     "id": "M37",
@@ -829,7 +829,7 @@
     "desc": "drop measured from the first visit on the old surface",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
-    "seconds": 7.4
+    "seconds": 12.2
    },
    {
     "id": "M38",
@@ -837,7 +837,7 @@
     "desc": "before/after gap limits not both enforced",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
-    "seconds": 7.1
+    "seconds": 11.1
    },
    {
     "id": "M39",
@@ -845,7 +845,7 @@
     "desc": "rates from two visits or very short spans",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_segment_rate",
-    "seconds": 7.0
+    "seconds": 11.2
    },
    {
     "id": "M40",
@@ -853,7 +853,7 @@
     "desc": "after-vs-before fit regressed the wrong way round",
     "killed": true,
     "first_failure": "tests/test_data_models.py::test_treatment_summary_hand_values",
-    "seconds": 7.1
+    "seconds": 11.3
    },
    {
     "id": "M41",
@@ -861,7 +861,7 @@
     "desc": "a treatment can make a smooth section rougher",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_treatment_never_makes_a_section_rougher_and_respects_the_floor",
-    "seconds": 7.3
+    "seconds": 12.7
    },
    {
     "id": "M42",
@@ -869,7 +869,7 @@
     "desc": "growth rate after treatment ignored",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_trajectory_with_treatment_hand_values",
-    "seconds": 7.6
+    "seconds": 10.8
    },
    {
     "id": "M43",
@@ -877,7 +877,7 @@
     "desc": "condition before treatment taken one year late",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_trajectory_do_nothing_is_linear",
-    "seconds": 7.6
+    "seconds": 10.7
    },
    {
     "id": "M44",
@@ -885,7 +885,7 @@
     "desc": "cost ignores section length",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_options_cost_scales_with_length",
-    "seconds": 7.6
+    "seconds": 12.4
    },
    {
     "id": "M45",
@@ -893,7 +893,7 @@
     "desc": "all years share the first year's budget row",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_mip_matches_brute_force_on_small_networks[0]",
-    "seconds": 9.6
+    "seconds": 12.6
    },
    {
     "id": "M46",
@@ -901,7 +901,7 @@
     "desc": "MIP minimises the benefit",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
-    "seconds": 9.5
+    "seconds": 10.9
    },
    {
     "id": "M47",
@@ -909,7 +909,7 @@
     "desc": "rules rank best-first / youngest-first",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
-    "seconds": 9.2
+    "seconds": 11.2
    },
    {
     "id": "M48",
@@ -917,7 +917,7 @@
     "desc": "rule never deducts what it spends",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
-    "seconds": 10.6
+    "seconds": 14.7
    },
    {
     "id": "M49",
@@ -925,7 +925,7 @@
     "desc": "section eligibility ignored",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_section_eligibility_limits_the_options_and_the_rules",
-    "seconds": 16.5
+    "seconds": 13.2
    },
    {
     "id": "M50",
@@ -933,7 +933,7 @@
     "desc": "RQI window of the preventive treatment ignored",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_applicability_window_uses_rqi",
-    "seconds": 15.8
+    "seconds": 12.6
    },
    {
     "id": "M51",
@@ -941,7 +941,7 @@
     "desc": "network mean not length-weighted",
     "killed": true,
     "first_failure": "tests/test_optimize.py::test_evaluate_plan_hand_values",
-    "seconds": 16.3
+    "seconds": 13.5
    },
    {
     "id": "M52",
@@ -949,7 +949,7 @@
     "desc": "thin overlay allowed on PCI or RDI alone",
     "killed": true,
     "first_failure": "tests/test_results.py::test_network_is_current",
-    "seconds": 43.1
+    "seconds": 36.4
    },
    {
     "id": "M53",
@@ -957,7 +957,7 @@
     "desc": "resurfacing allowed on any cracking",
     "killed": true,
     "first_failure": "tests/test_results.py::test_network_is_current",
-    "seconds": 36.7
+    "seconds": 33.4
    },
    {
     "id": "M54",
@@ -965,7 +965,7 @@
     "desc": "budget-to-match interpolation wrong",
     "killed": true,
     "first_failure": "tests/test_results.py::test_budget_to_match_interpolates",
-    "seconds": 38.5
+    "seconds": 34.1
    },
    {
     "id": "M55",
@@ -973,7 +973,7 @@
     "desc": "worst-first never picks the thick overlay by roughness",
     "killed": true,
     "first_failure": "tests/test_results.py::test_rule_plans_are_current_and_never_beat_the_mip",
-    "seconds": 37.5
+    "seconds": 35.4
    },
    {
     "id": "M56",
@@ -981,7 +981,7 @@
     "desc": "cost per lane-mile converted the wrong way",
     "killed": true,
     "first_failure": "tests/test_results.py::test_stored_plan_reproduces_the_reported_figures",
-    "seconds": 34.0
+    "seconds": 31.0
    },
    {
     "id": "M57",
@@ -989,7 +989,7 @@
     "desc": "network takes every section, however old its last visit",
     "killed": true,
     "first_failure": "tests/test_results.py::test_network_is_current",
-    "seconds": 33.5
+    "seconds": 30.2
    },
    {
     "id": "M58",
@@ -997,7 +997,7 @@
     "desc": "percentages not multiplied by 100",
     "killed": true,
     "first_failure": "tests/test_report.py::test_lookup_and_fmt",
-    "seconds": 10.5
+    "seconds": 8.5
    },
    {
     "id": "M59",
@@ -1005,7 +1005,7 @@
     "desc": "number check lets rounded fractions pass as whole numbers",
     "killed": true,
     "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[2",
-    "seconds": 10.7
+    "seconds": 8.6
    },
    {
     "id": "M60",
@@ -1013,7 +1013,7 @@
     "desc": "number check never reports anything",
     "killed": true,
     "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[MAE",
-    "seconds": 9.7
+    "seconds": 9.1
    },
    {
     "id": "M61",
@@ -1021,7 +1021,7 @@
     "desc": "verdict 'better' without the interval",
     "killed": true,
     "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
-    "seconds": 32.6
+    "seconds": 27.5
    },
    {
     "id": "M62",
@@ -1029,7 +1029,7 @@
     "desc": "verdict never says 'worse'",
     "killed": true,
     "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
-    "seconds": 30.9
+    "seconds": 25.3
    }
   ]
  }

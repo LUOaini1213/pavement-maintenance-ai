@@ -100,10 +100,10 @@ def verdict_sentence_zh(res: dict) -> str:
         b = det[ind]["grouped_forward"]["all"]
         spec = INDICATOR_SPEC[ind]
         g = b["gbm_minus_best_baseline_mae"]
-        word = {"boosting is better": "优于", "boosting is worse": "不如",
-                "no detectable difference": "与之无法区分："}[_verdict(b)]
-        out.append(f"- {name[ind]}：梯度提升 MAE {fmt(b['methods']['gbm']['mae'], spec)}，{word}最优朴素基线"
-                   f"「{base[b['best_baseline']]}」（MAE {fmt(b['methods'][b['best_baseline']]['mae'], spec)}），"
+        best = f"最优朴素基线「{base[b['best_baseline']]}」（MAE {fmt(b['methods'][b['best_baseline']]['mae'], spec)}）"
+        text = {"boosting is better": f"优于{best}", "boosting is worse": f"不如{best}",
+                "no detectable difference": f"与{best}无显著差异"}[_verdict(b)]
+        out.append(f"  - {name[ind]}：梯度提升 MAE {fmt(b['methods']['gbm']['mae'], spec)}，{text}；"
                    f"差值 {fmt(g['diff'], '+' + spec)}（区间 {fmt(g['lo'], '+' + spec)} 至 {fmt(g['hi'], '+' + spec)}）。")
     return "\n".join(out)
 
