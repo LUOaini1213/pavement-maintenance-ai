@@ -70,6 +70,12 @@ def test_data_summary_is_current(results, data):
     assert json.loads(json.dumps(pipeline.clean(pipeline.data_summary(data)))) == results["data"]
 
 
+def test_inputs_record_is_current(results):
+    import run_all
+    assert json.loads(json.dumps(run_all.inputs_record())) == results["inputs"]
+    assert results["inputs"]["optimisation"]["mip_rel_gap"] == config.OPTIMISATION["mip_rel_gap"]
+
+
 def test_china_view_is_current(results, data):
     assert json.loads(json.dumps(pipeline.china_view(data))) == results["china"]
     assert results["china"]["iri_at_rqi_expressway"]["90"] == pytest.approx(2.234515, abs=1e-5)
@@ -141,6 +147,21 @@ def network(results):
     names = [t.name for t in treatments]
     plan = {index[sid]: (int(t), names.index(name)) for sid, t, name in detail["base_mip_plan"]}
     return sections, treatments, plan
+
+
+def test_network_is_current(results, data, network):
+    import pandas as pd
+    sections, _, _ = network
+    rate = results["optimisation"]["network"]["global_rate"]
+    stand_in = pd.DataFrame({"y0": [1.0] * 3, "y1": [1.0 + rate] * 3, "h": [1.0] * 3})    # pairs with that median rate
+    fresh, info = pipeline.build_network(data, stand_in, "global_rate")
+    last_visit = data["iri"].groupby("section_id")["date"].max()
+    assert info["candidates"] == int((last_visit >= "2010").sum()) == results["optimisation"]["network"]["candidates"]
+    assert [s.sid for s in fresh] == [s.sid for s in sections]
+    assert [s.iri0 for s in fresh] == pytest.approx([s.iri0 for s in sections])
+    assert [s.eligible for s in fresh] == [s.eligible for s in sections]
+    assert all(s.rate == pytest.approx(rate) for s in fresh)
+    assert all(last_visit[s.sid] >= "2010" for s in fresh)
 
 
 def test_stored_plan_reproduces_the_reported_figures(results, network):

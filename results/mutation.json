@@ -1,18 +1,1036 @@
 {
- "tests": 0,
- "control": {},
+ "tests": 134,
+ "control": {
+  "desc": "control: RQI always zero",
+  "killed": true,
+  "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values"
+ },
  "first": {
-  "pending": true,
-  "tests": 0,
-  "total": 0,
-  "killed": 0,
-  "survived": 0
+  "tests": 132,
+  "total": 62,
+  "killed": 58,
+  "survived": 4,
+  "survivors": [
+   "M05",
+   "M25",
+   "M36",
+   "M57"
+  ],
+  "mutants": [
+   {
+    "id": "M01",
+    "file": "src/pavement_ai/china.py",
+    "desc": "expressway RQI uses the a0 of the lower classes",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
+    "seconds": 5.0
+   },
+   {
+    "id": "M02",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RQI: IRI outside the exponential",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
+    "seconds": 4.9
+   },
+   {
+    "id": "M03",
+    "file": "src/pavement_ai/china.py",
+    "desc": "inverse RQI multiplies by a0",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_iri_for_rqi_is_the_inverse",
+    "seconds": 4.9
+   },
+   {
+    "id": "M04",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RDI second branch not measured from RDa",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rdi_piecewise[15.0-75.0]",
+    "seconds": 5.0
+   },
+   {
+    "id": "M05",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RDI at exactly RDb",
+    "killed": false,
+    "first_failure": null,
+    "seconds": 23.7
+   },
+   {
+    "id": "M06",
+    "file": "src/pavement_ai/china.py",
+    "desc": "PCI uses the cement-concrete coefficients",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_pci_hand_values",
+    "seconds": 6.0
+   },
+   {
+    "id": "M07",
+    "file": "src/pavement_ai/china.py",
+    "desc": "grade limits exclusive instead of inclusive",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_grade_limits[90.0-excellent]",
+    "seconds": 5.9
+   },
+   {
+    "id": "M08",
+    "file": "src/pavement_ai/china.py",
+    "desc": "thin-overlay window takes the ultra-thin values",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_preventive_windows_are_the_published_ones",
+    "seconds": 5.9
+   },
+   {
+    "id": "M09",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a 40 mm overlay no longer counts as thin",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[19-40.0-2-thin_overlay]",
+    "seconds": 5.8
+   },
+   {
+    "id": "M10",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a 75 mm overlay counted as medium",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[55-75.0-2-thick_overlay]",
+    "seconds": 5.8
+   },
+   {
+    "id": "M11",
+    "file": "src/pavement_ai/events.py",
+    "desc": "slurry seal (33) dropped from the seal codes",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[33-None-2-seal]",
+    "seconds": 5.9
+   },
+   {
+    "id": "M12",
+    "file": "src/pavement_ai/events.py",
+    "desc": "routine work (crack sealing) starts a new segment",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_resetting_set",
+    "seconds": 6.3
+   },
+   {
+    "id": "M13",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a seal recorded with an overlay outranks the overlay",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[31,51-61.0-6-medium_overlay]",
+    "seconds": 6.1
+   },
+   {
+    "id": "M14",
+    "file": "src/pavement_ai/data.py",
+    "desc": "decimal year from the month number",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_decimal_year",
+    "seconds": 6.2
+   },
+   {
+    "id": "M15",
+    "file": "src/pavement_ai/data.py",
+    "desc": "OLS slope divided by n instead of Sxx",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_ols_line_hand_values",
+    "seconds": 5.0
+   },
+   {
+    "id": "M16",
+    "file": "src/pavement_ai/data.py",
+    "desc": "trend baseline fitted on the whole segment (look-ahead leak)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_three_point_trend_hand_values",
+    "seconds": 5.1
+   },
+   {
+    "id": "M17",
+    "file": "src/pavement_ai/data.py",
+    "desc": "maximum horizon not enforced",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_horizon_limits_and_clipping",
+    "seconds": 5.1
+   },
+   {
+    "id": "M18",
+    "file": "src/pavement_ai/data.py",
+    "desc": "pairs run across a treatment",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_pairs_never_cross_a_treatment_and_trends_use_history_only",
+    "seconds": 5.0
+   },
+   {
+    "id": "M19",
+    "file": "src/pavement_ai/data.py",
+    "desc": "other indicators attached from the nearest visit, also future ones",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
+    "seconds": 5.1
+   },
+   {
+    "id": "M20",
+    "file": "src/pavement_ai/data.py",
+    "desc": "traffic taken from years after the origin",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
+    "seconds": 5.0
+   },
+   {
+    "id": "M21",
+    "file": "src/pavement_ai/data.py",
+    "desc": "monitoring start used as construction date",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_segments_split_only_at_surface_renewals",
+    "seconds": 4.9
+   },
+   {
+    "id": "M22",
+    "file": "src/pavement_ai/models.py",
+    "desc": "global rate is the mean rate",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
+    "seconds": 5.1
+   },
+   {
+    "id": "M23",
+    "file": "src/pavement_ai/models.py",
+    "desc": "global rate ignores the horizon",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
+    "seconds": 5.0
+   },
+   {
+    "id": "M24",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov state boundaries shifted",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
+    "seconds": 5.1
+   },
+   {
+    "id": "M25",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov steps rounded down",
+    "killed": false,
+    "first_failure": null,
+    "seconds": 20.6
+   },
+   {
+    "id": "M26",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov transition matrix transposed",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
+    "seconds": 4.9
+   },
+   {
+    "id": "M27",
+    "file": "src/pavement_ai/models.py",
+    "desc": "boosting returns the increment only",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_boosting_learns_a_traffic_driven_rate_that_a_global_rate_cannot",
+    "seconds": 5.5
+   },
+   {
+    "id": "M28",
+    "file": "src/pavement_ai/models.py",
+    "desc": "overlay-on-concrete flag always on",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_feature_frame_encodes_event_and_family",
+    "seconds": 5.0
+   },
+   {
+    "id": "M29",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "training pairs may end after the time cut",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
+    "seconds": 7.4
+   },
+   {
+    "id": "M30",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "test pairs may start before the time cut",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
+    "seconds": 7.4
+   },
+   {
+    "id": "M31",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "test sites also used for training (leak)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_fold_assignment_is_stable_and_site_disjoint",
+    "seconds": 7.8
+   },
+   {
+    "id": "M32",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "RMSE without the square root",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_error_metrics_hand_values",
+    "seconds": 6.4
+   },
+   {
+    "id": "M33",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "bootstrap does not resample (zero-width intervals)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_cluster_bootstrap_interval_reflects_between_site_spread",
+    "seconds": 6.3
+   },
+   {
+    "id": "M34",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "sign of boosting-minus-baseline flipped",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
+    "seconds": 5.9
+   },
+   {
+    "id": "M35",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "boosting compared with the worst baseline",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
+    "seconds": 5.4
+   },
+   {
+    "id": "M36",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "'beats' declared without looking at the interval",
+    "killed": false,
+    "first_failure": null,
+    "seconds": 17.7
+   },
+   {
+    "id": "M37",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "drop measured from the first visit on the old surface",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
+    "seconds": 5.6
+   },
+   {
+    "id": "M38",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "before/after gap limits not both enforced",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
+    "seconds": 5.7
+   },
+   {
+    "id": "M39",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "rates from two visits or very short spans",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_segment_rate",
+    "seconds": 5.7
+   },
+   {
+    "id": "M40",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "after-vs-before fit regressed the wrong way round",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_treatment_summary_hand_values",
+    "seconds": 6.3
+   },
+   {
+    "id": "M41",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "a treatment can make a smooth section rougher",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_treatment_never_makes_a_section_rougher_and_respects_the_floor",
+    "seconds": 6.3
+   },
+   {
+    "id": "M42",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "growth rate after treatment ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_trajectory_with_treatment_hand_values",
+    "seconds": 6.3
+   },
+   {
+    "id": "M43",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "condition before treatment taken one year late",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_trajectory_do_nothing_is_linear",
+    "seconds": 6.0
+   },
+   {
+    "id": "M44",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "cost ignores section length",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_options_cost_scales_with_length",
+    "seconds": 6.0
+   },
+   {
+    "id": "M45",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "all years share the first year's budget row",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_matches_brute_force_on_small_networks[0]",
+    "seconds": 6.1
+   },
+   {
+    "id": "M46",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "MIP minimises the benefit",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 5.9
+   },
+   {
+    "id": "M47",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "rules rank best-first / youngest-first",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 5.8
+   },
+   {
+    "id": "M48",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "rule never deducts what it spends",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 5.8
+   },
+   {
+    "id": "M49",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "section eligibility ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_section_eligibility_limits_the_options_and_the_rules",
+    "seconds": 6.1
+   },
+   {
+    "id": "M50",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "RQI window of the preventive treatment ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_applicability_window_uses_rqi",
+    "seconds": 5.9
+   },
+   {
+    "id": "M51",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "network mean not length-weighted",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_evaluate_plan_hand_values",
+    "seconds": 6.0
+   },
+   {
+    "id": "M52",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "thin overlay allowed on PCI or RDI alone",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_eligibility_windows[1.1-5.0-expected2]",
+    "seconds": 16.8
+   },
+   {
+    "id": "M53",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "resurfacing allowed on any cracking",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_eligibility_windows[6.0-5.0-expected5]",
+    "seconds": 17.1
+   },
+   {
+    "id": "M54",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "budget-to-match interpolation wrong",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_budget_to_match_interpolates",
+    "seconds": 17.4
+   },
+   {
+    "id": "M55",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "worst-first never picks the thick overlay by roughness",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_rule_plans_are_current_and_never_beat_the_mip",
+    "seconds": 17.5
+   },
+   {
+    "id": "M56",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "cost per lane-mile converted the wrong way",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_stored_plan_reproduces_the_reported_figures",
+    "seconds": 17.6
+   },
+   {
+    "id": "M57",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "network takes every section, however old its last visit",
+    "killed": false,
+    "first_failure": null,
+    "seconds": 17.9
+   },
+   {
+    "id": "M58",
+    "file": "src/pavement_ai/report.py",
+    "desc": "percentages not multiplied by 100",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_lookup_and_fmt",
+    "seconds": 6.5
+   },
+   {
+    "id": "M59",
+    "file": "src/pavement_ai/report.py",
+    "desc": "number check lets rounded fractions pass as whole numbers",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[2",
+    "seconds": 6.6
+   },
+   {
+    "id": "M60",
+    "file": "src/pavement_ai/report.py",
+    "desc": "number check never reports anything",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[MAE",
+    "seconds": 6.0
+   },
+   {
+    "id": "M61",
+    "file": "src/pavement_ai/report_tables.py",
+    "desc": "verdict 'better' without the interval",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
+    "seconds": 15.8
+   },
+   {
+    "id": "M62",
+    "file": "src/pavement_ai/report_tables.py",
+    "desc": "verdict never says 'worse'",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
+    "seconds": 14.7
+   }
+  ],
+  "equivalent_survivors": {},
+  "unexplained_survivors": [
+   "M05",
+   "M25",
+   "M36",
+   "M57"
+  ]
  },
  "final": {
-  "pending": true,
-  "tests": 0,
-  "total": 0,
-  "killed": 0,
-  "survived": 0
+  "tests": 134,
+  "total": 62,
+  "killed": 61,
+  "survived": 1,
+  "survivors": [
+   "M05"
+  ],
+  "equivalent_survivors": {
+   "M05": "at RD = RDb = 40 mm the second branch gives 90 - 3 x (40 - 10) = 0, the same value as the third branch, so '<' and '<=' agree for every rut depth"
+  },
+  "unexplained_survivors": [],
+  "mutants": [
+   {
+    "id": "M01",
+    "file": "src/pavement_ai/china.py",
+    "desc": "expressway RQI uses the a0 of the lower classes",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
+    "seconds": 6.3
+   },
+   {
+    "id": "M02",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RQI: IRI outside the exponential",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rqi_expressway_hand_values",
+    "seconds": 6.4
+   },
+   {
+    "id": "M03",
+    "file": "src/pavement_ai/china.py",
+    "desc": "inverse RQI multiplies by a0",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_iri_for_rqi_is_the_inverse",
+    "seconds": 6.3
+   },
+   {
+    "id": "M04",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RDI second branch not measured from RDa",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_rdi_piecewise[15.0-75.0]",
+    "seconds": 6.3
+   },
+   {
+    "id": "M05",
+    "file": "src/pavement_ai/china.py",
+    "desc": "RDI at exactly RDb",
+    "killed": false,
+    "first_failure": null,
+    "seconds": 34.6
+   },
+   {
+    "id": "M06",
+    "file": "src/pavement_ai/china.py",
+    "desc": "PCI uses the cement-concrete coefficients",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_pci_hand_values",
+    "seconds": 6.4
+   },
+   {
+    "id": "M07",
+    "file": "src/pavement_ai/china.py",
+    "desc": "grade limits exclusive instead of inclusive",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_grade_limits[90.0-excellent]",
+    "seconds": 6.5
+   },
+   {
+    "id": "M08",
+    "file": "src/pavement_ai/china.py",
+    "desc": "thin-overlay window takes the ultra-thin values",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_preventive_windows_are_the_published_ones",
+    "seconds": 6.3
+   },
+   {
+    "id": "M09",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a 40 mm overlay no longer counts as thin",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[19-40.0-2-thin_overlay]",
+    "seconds": 7.1
+   },
+   {
+    "id": "M10",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a 75 mm overlay counted as medium",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[55-75.0-2-thick_overlay]",
+    "seconds": 7.0
+   },
+   {
+    "id": "M11",
+    "file": "src/pavement_ai/events.py",
+    "desc": "slurry seal (33) dropped from the seal codes",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[33-None-2-seal]",
+    "seconds": 7.4
+   },
+   {
+    "id": "M12",
+    "file": "src/pavement_ai/events.py",
+    "desc": "routine work (crack sealing) starts a new segment",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_resetting_set",
+    "seconds": 8.6
+   },
+   {
+    "id": "M13",
+    "file": "src/pavement_ai/events.py",
+    "desc": "a seal recorded with an overlay outranks the overlay",
+    "killed": true,
+    "first_failure": "tests/test_china_events.py::test_classify_event[31,51-61.0-6-medium_overlay]",
+    "seconds": 9.1
+   },
+   {
+    "id": "M14",
+    "file": "src/pavement_ai/data.py",
+    "desc": "decimal year from the month number",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_decimal_year",
+    "seconds": 8.8
+   },
+   {
+    "id": "M15",
+    "file": "src/pavement_ai/data.py",
+    "desc": "OLS slope divided by n instead of Sxx",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_ols_line_hand_values",
+    "seconds": 7.2
+   },
+   {
+    "id": "M16",
+    "file": "src/pavement_ai/data.py",
+    "desc": "trend baseline fitted on the whole segment (look-ahead leak)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_three_point_trend_hand_values",
+    "seconds": 6.9
+   },
+   {
+    "id": "M17",
+    "file": "src/pavement_ai/data.py",
+    "desc": "maximum horizon not enforced",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_horizon_limits_and_clipping",
+    "seconds": 6.8
+   },
+   {
+    "id": "M18",
+    "file": "src/pavement_ai/data.py",
+    "desc": "pairs run across a treatment",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_pairs_never_cross_a_treatment_and_trends_use_history_only",
+    "seconds": 8.0
+   },
+   {
+    "id": "M19",
+    "file": "src/pavement_ai/data.py",
+    "desc": "other indicators attached from the nearest visit, also future ones",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
+    "seconds": 8.1
+   },
+   {
+    "id": "M20",
+    "file": "src/pavement_ai/data.py",
+    "desc": "traffic taken from years after the origin",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_asof_features_and_traffic_do_not_look_ahead",
+    "seconds": 8.1
+   },
+   {
+    "id": "M21",
+    "file": "src/pavement_ai/data.py",
+    "desc": "monitoring start used as construction date",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_segments_split_only_at_surface_renewals",
+    "seconds": 8.7
+   },
+   {
+    "id": "M22",
+    "file": "src/pavement_ai/models.py",
+    "desc": "global rate is the mean rate",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
+    "seconds": 8.7
+   },
+   {
+    "id": "M23",
+    "file": "src/pavement_ai/models.py",
+    "desc": "global rate ignores the horizon",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_global_rate_is_the_median_annual_rate",
+    "seconds": 8.7
+   },
+   {
+    "id": "M24",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov state boundaries shifted",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
+    "seconds": 8.8
+   },
+   {
+    "id": "M25",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov steps rounded down",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
+    "seconds": 6.9
+   },
+   {
+    "id": "M26",
+    "file": "src/pavement_ai/models.py",
+    "desc": "Markov transition matrix transposed",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_markov_chain_hand_values",
+    "seconds": 6.6
+   },
+   {
+    "id": "M27",
+    "file": "src/pavement_ai/models.py",
+    "desc": "boosting returns the increment only",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_boosting_learns_a_traffic_driven_rate_that_a_global_rate_cannot",
+    "seconds": 7.1
+   },
+   {
+    "id": "M28",
+    "file": "src/pavement_ai/models.py",
+    "desc": "overlay-on-concrete flag always on",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_feature_frame_encodes_event_and_family",
+    "seconds": 6.6
+   },
+   {
+    "id": "M29",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "training pairs may end after the time cut",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
+    "seconds": 7.7
+   },
+   {
+    "id": "M30",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "test pairs may start before the time cut",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_time_cut_keeps_training_before_and_testing_after",
+    "seconds": 6.9
+   },
+   {
+    "id": "M31",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "test sites also used for training (leak)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_fold_assignment_is_stable_and_site_disjoint",
+    "seconds": 6.8
+   },
+   {
+    "id": "M32",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "RMSE without the square root",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_error_metrics_hand_values",
+    "seconds": 6.8
+   },
+   {
+    "id": "M33",
+    "file": "src/pavement_ai/validation.py",
+    "desc": "bootstrap does not resample (zero-width intervals)",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_cluster_bootstrap_interval_reflects_between_site_spread",
+    "seconds": 6.5
+   },
+   {
+    "id": "M34",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "sign of boosting-minus-baseline flipped",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
+    "seconds": 6.5
+   },
+   {
+    "id": "M35",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "boosting compared with the worst baseline",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_summarise_names_best_baseline_and_sign_of_the_gain",
+    "seconds": 6.4
+   },
+   {
+    "id": "M36",
+    "file": "src/pavement_ai/deterioration.py",
+    "desc": "'beats' declared without looking at the interval",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_beats_needs_the_whole_interval_below_zero",
+    "seconds": 6.6
+   },
+   {
+    "id": "M37",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "drop measured from the first visit on the old surface",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
+    "seconds": 7.4
+   },
+   {
+    "id": "M38",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "before/after gap limits not both enforced",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_event_table_hand_values",
+    "seconds": 7.1
+   },
+   {
+    "id": "M39",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "rates from two visits or very short spans",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_segment_rate",
+    "seconds": 7.0
+   },
+   {
+    "id": "M40",
+    "file": "src/pavement_ai/treatment.py",
+    "desc": "after-vs-before fit regressed the wrong way round",
+    "killed": true,
+    "first_failure": "tests/test_data_models.py::test_treatment_summary_hand_values",
+    "seconds": 7.1
+   },
+   {
+    "id": "M41",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "a treatment can make a smooth section rougher",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_treatment_never_makes_a_section_rougher_and_respects_the_floor",
+    "seconds": 7.3
+   },
+   {
+    "id": "M42",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "growth rate after treatment ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_trajectory_with_treatment_hand_values",
+    "seconds": 7.6
+   },
+   {
+    "id": "M43",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "condition before treatment taken one year late",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_trajectory_do_nothing_is_linear",
+    "seconds": 7.6
+   },
+   {
+    "id": "M44",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "cost ignores section length",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_options_cost_scales_with_length",
+    "seconds": 7.6
+   },
+   {
+    "id": "M45",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "all years share the first year's budget row",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_matches_brute_force_on_small_networks[0]",
+    "seconds": 9.6
+   },
+   {
+    "id": "M46",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "MIP minimises the benefit",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 9.5
+   },
+   {
+    "id": "M47",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "rules rank best-first / youngest-first",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 9.2
+   },
+   {
+    "id": "M48",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "rule never deducts what it spends",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_mip_hand_case_beats_worst_first",
+    "seconds": 10.6
+   },
+   {
+    "id": "M49",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "section eligibility ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_section_eligibility_limits_the_options_and_the_rules",
+    "seconds": 16.5
+   },
+   {
+    "id": "M50",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "RQI window of the preventive treatment ignored",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_applicability_window_uses_rqi",
+    "seconds": 15.8
+   },
+   {
+    "id": "M51",
+    "file": "src/pavement_ai/optimize.py",
+    "desc": "network mean not length-weighted",
+    "killed": true,
+    "first_failure": "tests/test_optimize.py::test_evaluate_plan_hand_values",
+    "seconds": 16.3
+   },
+   {
+    "id": "M52",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "thin overlay allowed on PCI or RDI alone",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_network_is_current",
+    "seconds": 43.1
+   },
+   {
+    "id": "M53",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "resurfacing allowed on any cracking",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_network_is_current",
+    "seconds": 36.7
+   },
+   {
+    "id": "M54",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "budget-to-match interpolation wrong",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_budget_to_match_interpolates",
+    "seconds": 38.5
+   },
+   {
+    "id": "M55",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "worst-first never picks the thick overlay by roughness",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_rule_plans_are_current_and_never_beat_the_mip",
+    "seconds": 37.5
+   },
+   {
+    "id": "M56",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "cost per lane-mile converted the wrong way",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_stored_plan_reproduces_the_reported_figures",
+    "seconds": 34.0
+   },
+   {
+    "id": "M57",
+    "file": "src/pavement_ai/pipeline.py",
+    "desc": "network takes every section, however old its last visit",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_network_is_current",
+    "seconds": 33.5
+   },
+   {
+    "id": "M58",
+    "file": "src/pavement_ai/report.py",
+    "desc": "percentages not multiplied by 100",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_lookup_and_fmt",
+    "seconds": 10.5
+   },
+   {
+    "id": "M59",
+    "file": "src/pavement_ai/report.py",
+    "desc": "number check lets rounded fractions pass as whole numbers",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[2",
+    "seconds": 10.7
+   },
+   {
+    "id": "M60",
+    "file": "src/pavement_ai/report.py",
+    "desc": "number check never reports anything",
+    "killed": true,
+    "first_failure": "tests/test_report.py::test_unsupported_numbers_are_reported[MAE",
+    "seconds": 9.7
+   },
+   {
+    "id": "M61",
+    "file": "src/pavement_ai/report_tables.py",
+    "desc": "verdict 'better' without the interval",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
+    "seconds": 32.6
+   },
+   {
+    "id": "M62",
+    "file": "src/pavement_ai/report_tables.py",
+    "desc": "verdict never says 'worse'",
+    "killed": true,
+    "first_failure": "tests/test_results.py::test_readme_and_brief_are_regenerated_from_results",
+    "seconds": 30.9
+   }
+  ]
  }
 }

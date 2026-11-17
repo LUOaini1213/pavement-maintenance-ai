@@ -29,6 +29,15 @@ def read(name: str) -> dict:
     return json.loads((RESULTS / f"{name}.json").read_text(encoding="utf-8"))
 
 
+def inputs_record() -> dict:
+    """The settings and cited numbers of config.py, as a results file the documents can quote."""
+    return pipeline.clean({
+        "inputs": [{"input": a, "kind": b, "basis": c} for a, b, c in config.INPUT_TABLE],
+        "python": "3.11", "costs": config.COSTS, "optimisation": config.OPTIMISATION,
+        "event_classes": {"thin_overlay_max_mm": events.THIN_OVERLAY_MAX_MM,
+                          "thick_overlay_min_mm": events.THICK_OVERLAY_MIN_MM}})
+
+
 def write_optimisation(opt: dict) -> None:
     """The section list and the base plan go to results/detail/ (kept out of the pool the README numbers are
     checked against, which is results/*.json)."""
@@ -81,10 +90,7 @@ def main(parts: list[str]) -> None:
     data = D.load()
     if "data" in todo:
         pipeline.write_json("data", pipeline.clean(pipeline.data_summary(data)))
-        pipeline.write_json("inputs", {"inputs": [{"input": a, "kind": b, "basis": c} for a, b, c in config.INPUT_TABLE],
-                                       "python": "3.11", "costs": config.COSTS, "optimisation": config.OPTIMISATION,
-                                       "event_classes": {"thin_overlay_max_mm": events.THIN_OVERLAY_MAX_MM,
-                                                         "thick_overlay_min_mm": events.THICK_OVERLAY_MIN_MM}})
+        pipeline.write_json("inputs", inputs_record())
         log("data summary written")
     if "det" in todo:
         det, _ = pipeline.deterioration(data, log)

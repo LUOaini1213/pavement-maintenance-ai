@@ -49,7 +49,7 @@ those files and a test checks that.
   {{china:standards.preventive}} 表 {{china:preventive_windows_expressway.thin_overlay.table}}。系数与条款均核对自交通运输部官网文本，
   出处见 `docs/sources.md`。
 - 工程化：{{mutation:tests|d}} 个离线测试；变异测试首轮 {{mutation:first.killed|d}}/{{mutation:first.total|d}}，
-  补测试后 {{mutation:final.killed|d}}/{{mutation:final.total|d}}。
+  补测试后 {{mutation:final.killed|d}}/{{mutation:final.total|d}}（余下 {{mutation:final.survived|d}} 个为等价变异，原因见结果文件）。
 
 ## Data
 
@@ -273,7 +273,9 @@ Rebuilding the extracts from the source needs `requirements-data.txt` and networ
 Mutation testing (`mutation/run_mutants.py`): a control mutant that must be caught runs first; then
 {{mutation:first.total|d}} deliberate bugs were injected one at a time. First run: {{mutation:first.killed|d}}
 caught, {{mutation:first.survived|d}} survived. After adding tests for the survivors:
-{{mutation:final.killed|d}} of {{mutation:final.total|d}} caught. Both runs are in `results/mutation.json`.
+{{mutation:final.killed|d}} of {{mutation:final.total|d}} caught; {{mutation:final.survived|d}} left, which
+`results/mutation.json` lists with the reason (a mutant that changes no output cannot be caught). Both runs are
+in that file.
 
 ## Licence
 

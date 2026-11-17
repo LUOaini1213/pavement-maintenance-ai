@@ -116,7 +116,7 @@
  },
  "optimisation": {
   "horizon_years": 5,
-  "mip_rel_gap": 0.005,
+  "mip_rel_gap": 0.01,
   "network_min_last_visit_year": 2010,
   "section_length_lane_km": 1.0,
   "budget_shares": [

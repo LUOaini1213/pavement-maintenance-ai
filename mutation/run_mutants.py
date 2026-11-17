@@ -180,6 +180,13 @@ MUTANTS = [
 ]
 
 
+# Mutants that cannot be killed because they do not change any output, with the reason.
+EQUIVALENT = {
+    "M05": "at RD = RDb = 40 mm the second branch gives 90 - 3 x (40 - 10) = 0, the same value as the third branch, "
+           "so '<' and '<=' agree for every rut depth",
+}
+
+
 def copy_repo(dst: Path) -> None:
     for rel in COPY:
         src = REPO / rel
@@ -218,9 +225,12 @@ def collect_count() -> int:
     p = subprocess.run([sys.executable, "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider"], cwd=REPO,
                        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=600)
     m = re.search(r"(\d+) tests? collected", p.stdout)
-    if not m:
-        sys.exit("could not count the tests:\n" + p.stdout[-2000:] + p.stderr[-2000:])
-    return int(m.group(1))
+    if m:
+        return int(m.group(1))
+    per_file = re.findall(r"^tests/\S+: (\d+)$", p.stdout, flags=re.M)          # the quiet listing: one line per file
+    if not per_file:
+        sys.exit("could not count the tests:" + p.stdout[-2000:] + p.stderr[-2000:])
+    return sum(int(n) for n in per_file)
 
 
 def save(report: dict) -> None:
@@ -244,8 +254,7 @@ def main(label: str, workers: int, only: list[str]) -> None:
         if code != 0:
             print(out[-3000:])
             sys.exit("the unmodified suite fails; fix it before mutation testing")
-        m = re.search(r"(\d+) passed", out)
-        baseline = int(m.group(1)) if m else None
+        baseline = report.get("tests") or collect_count()
     control = run_mutant(CONTROL)
     if control["killed"] is not True:
         sys.exit(f"control mutant was not killed ({control}); the harness cannot be trusted")
@@ -263,8 +272,11 @@ def main(label: str, workers: int, only: list[str]) -> None:
     if only:
         return
     report["control"] = {"desc": control["desc"], "killed": True, "first_failure": control["first_failure"]}
+    survivors = [r["id"] for r in res if not r["killed"]]
     report[label] = {"tests": baseline, "total": len(res), "killed": killed, "survived": len(res) - killed,
-                     "survivors": [r["id"] for r in res if not r["killed"]], "mutants": res}
+                     "survivors": survivors,
+                     "equivalent_survivors": {m: EQUIVALENT[m] for m in survivors if m in EQUIVALENT},
+                     "unexplained_survivors": [m for m in survivors if m not in EQUIVALENT], "mutants": res}
     report["tests"] = baseline
     save(report)
 

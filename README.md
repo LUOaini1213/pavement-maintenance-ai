@@ -52,8 +52,8 @@ those files and a test checks that.
   7.4.8 把车辙换算为 RDI，并按表 4.0.2 分级；薄层罩面适用条件取自
   JTG/T 5142-01-2021 表 5.3.2。系数与条款均核对自交通运输部官网文本，
   出处见 `docs/sources.md`。
-- 工程化：0 个离线测试；变异测试首轮 0/0，
-  补测试后 0/0。
+- 工程化：134 个离线测试；变异测试首轮 58/62，
+  补测试后 61/62（余下 1 个为等价变异，原因见结果文件）。
 
 ## Data
 
@@ -217,7 +217,7 @@ The MIP has one binary variable per allowed (section, year, treatment), at most 
 the horizon and one budget row per year; the objective is the IRI-years saved against doing nothing. It is
 solved with HiGHS (5,065 binaries,
 496 rows, status Optimal, stopped once the plan was
-proven within 0.5 % of the best bound; the base case ended
+proven within 1.0 % of the best bound; the base case ended
 0.58 % from it).
 The worst-first rule ranks sections by current IRI and resurfaces those at or above
 1.5 m/km (thick overlay at or above
@@ -367,12 +367,14 @@ Rebuilding the extracts from the source needs `requirements-data.txt` and networ
 
 ## Tests
 
-0 offline tests (`pytest`), most of them hand-calculated cases; the workflow in
+134 offline tests (`pytest`), most of them hand-calculated cases; the workflow in
 `.github/workflows/ci.yml` runs them with the pinned requirements and regenerates this file to compare.
 Mutation testing (`mutation/run_mutants.py`): a control mutant that must be caught runs first; then
-0 deliberate bugs were injected one at a time. First run: 0
-caught, 0 survived. After adding tests for the survivors:
-0 of 0 caught. Both runs are in `results/mutation.json`.
+62 deliberate bugs were injected one at a time. First run: 58
+caught, 4 survived. After adding tests for the survivors:
+61 of 62 caught; 1 left, which
+`results/mutation.json` lists with the reason (a mutant that changes no output cannot be caught). Both runs are
+in that file.
 
 ## Licence
 

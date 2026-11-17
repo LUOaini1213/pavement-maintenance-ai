@@ -155,6 +155,8 @@ def test_markov_chain_hand_values():
     two = 0.25 * 1.6 / 3 + (0.25 + 0.5 / 3) * 1.5 + (1 / 3) * 2.5   # 1.591667
     pred = mk.predict(_pairs([(0.5, 0, 1.0), (0.5, 0, 2.0), (0.5, 0, 0.5), (0.7, 0, 2.4), (2.2, 0, 4.0), (1.2, 0, 1.4)]))
     assert pred == pytest.approx([one, two, one, two, 2.5, 1.5 / 3 + 2.5 * 2 / 3])
+    # horizons are rounded to the nearest whole year, not cut down: 1.6 years is two steps, 1.4 is one
+    assert mk.predict(_pairs([(0.5, 0, 1.6), (0.5, 0, 1.4)])) == pytest.approx([two, one])
 
 
 def test_markov_window_excludes_other_horizons():
@@ -288,6 +290,22 @@ def test_summarise_says_so_when_boosting_is_worse():
     assert res["all"]["gbm_minus_best_baseline_mae"]["diff"] == pytest.approx(0.1)
     assert res["all"]["gbm_mae_change_pct"] == pytest.approx(50.0)
     assert res["all"]["gbm_beats_best_baseline"] is False
+
+
+def test_beats_needs_the_whole_interval_below_zero():
+    # site a: boosting 1.0 better than the best baseline; site b: 0.9 worse. On average boosting is 0.05 better,
+    # but resampling the two sites gives -1.0, -0.05 or +0.9: the interval straddles zero, so no "beats".
+    y = np.zeros(4)
+    pairs = pd.DataFrame({"y1": y, "site_id": ["a", "a", "b", "b"], "h": [1.0, 1.0, 3.0, 3.0],
+                          "section_id": ["a1", "a1", "b1", "b1"]})
+    base = np.array([1.0, 1.0, 0.6, 0.6])
+    preds = {"last": base, "linear": base + 1, "exponential": base + 1, "global_rate": base + 1, "markov": base + 1,
+             "gbm": np.array([0.0, 0.0, 1.5, 1.5]), "gbm_l2": base + 2}
+    res = A.summarise(pairs, preds, np.ones(4, dtype=bool), n_boot=400)["all"]
+    g = res["gbm_minus_best_baseline_mae"]
+    assert res["best_baseline"] == "last" and g["diff"] == pytest.approx(-0.05)
+    assert g["lo"] == pytest.approx(-1.0) and g["hi"] == pytest.approx(0.9)
+    assert res["gbm_beats_best_baseline"] is False
 
 
 def test_out_of_fold_predictions_cover_only_test_pairs(toy):
