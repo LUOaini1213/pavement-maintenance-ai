@@ -87,7 +87,7 @@ def options(sections: list[Section], treatments: list[Treatment], horizon: int) 
 
 
 def solve_mip(sections: list[Section], treatments: list[Treatment], budgets: list[float],
-              mip_rel_gap: float = 1e-6, time_limit: float = 120.0) -> dict:
+              mip_rel_gap: float = 1e-6, time_limit: float = 600.0) -> dict:
     import highspy
     from scipy.sparse import csc_matrix
 

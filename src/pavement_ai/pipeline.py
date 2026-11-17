@@ -64,7 +64,8 @@ def data_summary(data: dict) -> dict:
 # ---- part A ---------------------------------------------------------------------------------------------------
 def deterioration(data: dict, log=print) -> tuple[dict, dict]:
     v = config.VALIDATION
-    out = {"settings": {**v, "methods": A.BASELINES + [A.ML, A.ML_L2], "features": {}}}
+    out = {"settings": {**v, "methods": A.BASELINES + [A.ML, A.ML_L2], "horizon_bins": A.horizon_bin_settings(),
+                        "features": {}}}
     datasets = {}
     for ind in D.INDICATORS:
         pairs = D.build_dataset(data, ind, min_h=v["min_horizon"], max_h=v["max_horizon"])
@@ -229,15 +230,17 @@ def rule_plans(sections: list[Section], treatments: list[Treatment], budgets: li
 def compare(sections: list[Section], treatments: list[Treatment], annual_budget: float) -> dict:
     horizon = config.OPTIMISATION["horizon_years"]
     budgets = [annual_budget] * horizon
-    mip = solve_mip(sections, treatments, budgets)
+    mip = solve_mip(sections, treatments, budgets, mip_rel_gap=config.OPTIMISATION["mip_rel_gap"])
     plans = {"do_nothing": {}, "mip": mip["plan"], **rule_plans(sections, treatments, budgets)}
-    out = {"annual_budget": annual_budget}
+    out = {"annual_budget": annual_budget, "annual_budget_million": annual_budget / 1000.0}
     for name, plan in plans.items():
         ev = evaluate_plan(sections, treatments, plan, horizon)
         ev["iri_years_saved"] = plan_benefit(sections, treatments, plan, horizon)
+        ev["total_spend_million"] = ev["total_spend"] / 1000.0
+        ev["spend_by_year_million"] = [v / 1000.0 for v in ev["spend_by_year"]]
         out[name] = ev
-    out["mip"].update({"status": mip["status"], "mip_gap": mip["mip_gap"], "binary_variables": mip["n_vars"],
-                       "constraints": mip["n_rows"]})
+    out["mip"].update({"status": mip["status"], "mip_gap": mip["mip_gap"], "dual_bound": mip["dual_bound"],
+                       "binary_variables": mip["n_vars"], "constraints": mip["n_rows"]})
     for rule in ("worst_first", "fixed_cycle"):
         base = out[rule]["iri_years_saved"]
         out[f"mip_vs_{rule}"] = {
@@ -266,11 +269,11 @@ def optimisation(data: dict, pairs: pd.DataFrame, det: dict, effects: dict) -> d
     treatments = build_treatments(effects)
     resurfacing_all = treatments[1].cost * info["lane_km"]
     out = {
-        "horizon_years": o["horizon_years"], "network": info,
+        "horizon_years": o["horizon_years"], "years": list(range(1, o["horizon_years"] + 1)), "network": info,
         "rate_model_reason": "boosting beat the best baseline under forward validation" if beats else
                              "boosting did not beat the best baseline under forward validation, so the baseline's "
                              "network-wide rate is used",
-        "resurfacing_whole_network": resurfacing_all,
+        "resurfacing_whole_network": resurfacing_all, "resurfacing_whole_network_million": resurfacing_all / 1000.0,
         "treatments": [{"name": t.name, "effect_class": config.EFFECT_CLASS[t.name],
                         "cost_per_lane_km": t.cost, "cost_per_lane_mile": t.cost * config.LANE_MILE_KM,
                         "post_intercept": t.post_a, "post_slope": t.post_b, "rate_after": t.rate_after,
@@ -312,8 +315,9 @@ def optimisation(data: dict, pairs: pd.DataFrame, det: dict, effects: dict) -> d
     other = "global_rate" if rate_model == "gbm" else "gbm"
     alt_sections, alt_info = build_network(data, pairs, other)
     alt = compare(alt_sections, treatments, o["base_budget_share"] * resurfacing_all)
-    base_plan = solve_mip(sections, treatments, [o["base_budget_share"] * resurfacing_all] * o["horizon_years"])["plan"]
-    alt_plan = solve_mip(alt_sections, treatments, [o["base_budget_share"] * resurfacing_all] * o["horizon_years"])["plan"]
+    base_budgets = [o["base_budget_share"] * resurfacing_all] * o["horizon_years"]
+    base_plan = solve_mip(sections, treatments, base_budgets, mip_rel_gap=o["mip_rel_gap"])["plan"]
+    alt_plan = solve_mip(alt_sections, treatments, base_budgets, mip_rel_gap=o["mip_rel_gap"])["plan"]
     ids = lambda secs, plan: {secs[i].sid for i in plan}          # noqa: E731
     a, b = ids(sections, base_plan), ids(alt_sections, alt_plan)
     out["rate_model_sensitivity"] = {

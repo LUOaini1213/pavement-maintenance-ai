@@ -43,6 +43,7 @@ EFFECT_CLASS = {"preventive": "thin_overlay", "minor_rehab": "medium_overlay", "
 
 OPTIMISATION = {
     "horizon_years": 5,
+    "mip_rel_gap": 0.002,                     # HiGHS stops once the plan is proven within 0.2 % of the best bound
     "network_min_last_visit_year": 2010,      # assumption: a section enters the network if profiled in 2010 or later
     "section_length_lane_km": 1.0,            # assumption: each 152 m LTPP test section stands for one lane-km
     "budget_shares": [0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.12],   # of the cost of resurfacing the whole network

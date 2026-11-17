@@ -15,7 +15,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from pavement_ai import config, pipeline  # noqa: E402
+from pavement_ai import config, events, pipeline  # noqa: E402
 from pavement_ai import data as D  # noqa: E402
 
 RESULTS = REPO / "results"
@@ -74,7 +74,9 @@ def main(parts: list[str]) -> None:
     if "data" in todo:
         pipeline.write_json("data", pipeline.clean(pipeline.data_summary(data)))
         pipeline.write_json("inputs", {"inputs": [{"input": a, "kind": b, "basis": c} for a, b, c in config.INPUT_TABLE],
-                                       "costs": config.COSTS, "optimisation": config.OPTIMISATION})
+                                       "costs": config.COSTS, "optimisation": config.OPTIMISATION,
+                                       "event_classes": {"thin_overlay_max_mm": events.THIN_OVERLAY_MAX_MM,
+                                                         "thick_overlay_min_mm": events.THICK_OVERLAY_MIN_MM}})
         log("data summary written")
     if "det" in todo:
         det, _ = pipeline.deterioration(data, log)

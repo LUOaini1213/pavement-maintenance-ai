@@ -14,6 +14,13 @@ ML_L2 = "gbm_l2"           # same model trained on squared error, reported next 
 HORIZON_BINS = {"h_0.5_2": (0.5, 2.0), "h_2_5": (2.0, 5.0)}
 
 
+def horizon_bin_settings() -> dict:
+    """The horizon ranges behind the result blocks 'all', 'h_0.5_2' and 'h_2_5', for the report."""
+    (s_key, (s_lo, s_hi)), (l_key, (l_lo, l_hi)) = HORIZON_BINS.items()
+    return {"all": {"key": "all", "from": s_lo, "to": l_hi}, "short": {"key": s_key, "from": s_lo, "to": s_hi},
+            "long": {"key": l_key, "from": l_lo, "to": l_hi}}
+
+
 def extra_features(indicator: str) -> list[str]:
     return [f"{k}_0" for k in INDICATORS if k != indicator]
 
